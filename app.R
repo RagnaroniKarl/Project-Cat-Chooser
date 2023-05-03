@@ -37,9 +37,9 @@ ui <- fluidPage(
           tabsetPanel(type = "tab", 
                       tabPanel("Introduction", textOutput("introduction")),
                       tabPanel("Different Cat Breeds", textOutput("breeds")),
-                      tabPanel("Vetenarians near me", textOutput("vets")),
-                      tabPanel("Adoption Centers near me", textOutput("adoption")),
-                      tabPanel("About us", textOutput("aboutus"))),
+                      tabPanel("Vetenarians Near Me", textOutput("vets")),
+                      tabPanel("Adoption Centers Near Me", textOutput("adoption")),
+                      tabPanel("About Us", textOutput("aboutus"))),
           selectInput("select", h3("Select your cat breed :"),
                       choices = list("Select your breed..." = 1, "Abyssinian" = 2, "American Bobtail" = 3, "American Shorthair" = 4, "Balinese" = 5, "Bengal" = 6, "Birman" = 7, "Bombay" = 8, "British Shorthair" = 9, "Devon Rex" = 10, "Domestic Longhair" = 11, "Exotic Shorthair" = 12, "Himalayan" = 13, "Maine Coon" = 14, "Norwegian Forest" = 15, "Persian" = 16, "Ragdoll" = 17, "Savannah" = 18, "Scottish Fold" = 19, "Siamese" = 20, "Sphynx" = 21), selected = 1)
                       )
