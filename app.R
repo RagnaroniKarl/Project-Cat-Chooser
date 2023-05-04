@@ -15,22 +15,22 @@ ui <- fluidPage(
     h1("Welcome to CatChooser.com!", style = "color:red"),
   ),
   
-  # Sidebar with a slider input for number of bins 
+  #Sidebar panel
   sidebarLayout(
     sidebarPanel(
-      h3("About us : "),
-      p("This is a web application", 
-        strong(" for our Data Science project,",),
-        " so we decided on this! CatChooser! We think it will be very useful for many people who are interested by cats."),
-      br(),
-      p("We are three people who are working on this project. So we'll see how everything goes!"),
+      #h3("About us : "),
+      #p("This is a web application", 
+        #strong(" for our Data Science project,",),
+        #" so we decided on this! CatChooser! We think it will be very useful for many people who are interested by cats."),
+      #br(),
+      #p("We are three people who are working on this project. So we'll see how everything goes!"),
       
       #dateInput("date",
                 #h3("Input your Date here", style = "color:orange"),
                 #value = "2023-04-23")
     ),
     
-    # Show a plot of the generated distribution
+    #Main panel with tabs
     mainPanel(
       h1("This will be the main page of the site"),
       p("Please choose the feature/function you need to use currently!", style = "font-family: 'times"),
@@ -48,22 +48,22 @@ ui <- fluidPage(
     p("- Average Price"),
     br(),
     p("- What that Cat Breed is good with (Dogs, Kids, etc)."),  textOutput("breeds")),
-                  tabPanel("Vetenarians Near Me", textOutput("vets")),
-                  tabPanel("Adoption Centers Near Me", textOutput("adoption")),
-                  tabPanel("About Us", textOutput("aboutus"))),
-      selectInput("select", h3("Select your cat breed :"),
-                  choices = list("Select your breed..." = 1, "Abyssinian" = 2, "American Bobtail" = 3, "American Shorthair" = 4, "Balinese" = 5, "Bengal" = 6, "Birman" = 7, "Bombay" = 8, "British Shorthair" = 9, "Devon Rex" = 10, "Domestic Longhair" = 11, "Exotic Shorthair" = 12, "Himalayan" = 13, "Maine Coon" = 14, "Norwegian Forest" = 15, "Persian" = 16, "Ragdoll" = 17, "Savannah" = 18, "Scottish Fold" = 19, "Siamese" = 20, "Sphynx" = 21), selected = 1)
-    )
+                  tabPanel("Vetenarians Near Me", p("This is the page where you can find nearby vets for all of your cat's needs!"), textOutput("vets")),
+                  tabPanel("Adoption Centers Near Me",p("This is the page where you can find the nearest adoption centers to find your next best friend!"), textOutput("adoption")),
+                  tabPanel("About Us",p("This is the About Us page. Feel free to learn more about us, the reason behind this site and much more."), textOutput("aboutus"))),
+      selectInput("catbreeds", h3("Select your cat breed :"),
+                  choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Birman", "Bombay", "British Shorthair", "Devon Rex", "Domestic Longhair", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
+   textOutput("selected_catbreeds")
+     )
   )
 )
 
-
-# Define server logic required to draw a histogram
+#outputs
 server <- function(input, output) {
   
-  #introduction <- ({
-    #"This is the introduction page. Thank you for using our website!"
- # })
+  introduction <- ({
+    "This is the introduction page. Thank you for using our website!"
+  })
   
   breeds <- ({
     p("This is the section that talks about the various cat breeds, their personalities, prices, lifespan and much more.
@@ -106,6 +106,11 @@ server <- function(input, output) {
   output$aboutus <- renderPrint({
     aboutus
   })
+  
+  output$selected_catbreeds <- renderText({
+    paste("You have selected the ", input$catbreeds)
+  })
+  
 }
 
 # Run the application 
