@@ -16,26 +16,23 @@ ui <- fluidPage(
   ),
   
   #Sidebar panel
-  sidebarLayout(
-    sidebarPanel(
-      #h3("About us : "),
-      #p("This is a web application", 
-        #strong(" for our Data Science project,",),
-        #" so we decided on this! CatChooser! We think it will be very useful for many people who are interested by cats."),
-      #br(),
-      #p("We are three people who are working on this project. So we'll see how everything goes!"),
-      
-      #dateInput("date",
-                #h3("Input your Date here", style = "color:orange"),
-                #value = "2023-04-23")
-    ),
+  sidebarLayout(position = "left",
+    sidebarPanel(),
     
     #Main panel with tabs
     mainPanel(
       h1("This will be the main page of the site"),
       p("Please choose the feature/function you need to use currently!", style = "font-family: 'times"),
       tabsetPanel(type = "tab", 
+                  
+                  
+  #Introduction Tab                
                   tabPanel("Introduction", strong("This is the introduction page. Thank you for using our website!"), textOutput("introduction")),
+                  
+                  
+                  
+                  
+  #Cat Breeds Tab 
                   tabPanel("Different Cat Breeds",p("This is the section that talks about the various cat breeds, their personalities, prices, lifespan and much more.
     We will show an image of the selected cat breed, display important information about that particular cat breed including : "), 
      br(),                      
@@ -47,12 +44,18 @@ ui <- fluidPage(
     br(),
     p("- Average Price"),
     br(),
-    p("- What that Cat Breed is good with (Dogs, Kids, etc)."),  textOutput("breeds")),
+    p("- What that Cat Breed is good with (Dogs, Kids, etc)."),
+    selectInput("catbreeds", h3("Select your cat breed :"),
+                choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Birman", "Bombay", "British Shorthair", "Devon Rex", "Domestic Longhair", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
+    #textOutput("breeds")
+    ),
                   tabPanel("Vetenarians Near Me", p("This is the page where you can find nearby vets for all of your cat's needs!"), textOutput("vets")),
                   tabPanel("Adoption Centers Near Me",p("This is the page where you can find the nearest adoption centers to find your next best friend!"), textOutput("adoption")),
                   tabPanel("About Us",p("This is the About Us page. Feel free to learn more about us, the reason behind this site and much more."), textOutput("aboutus"))),
-      selectInput("catbreeds", h3("Select your cat breed :"),
-                  choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Birman", "Bombay", "British Shorthair", "Devon Rex", "Domestic Longhair", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
+      
+  
+  #selectInput("catbreeds", h3("Select your cat breed :"),
+                  #choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Birman", "Bombay", "British Shorthair", "Devon Rex", "Domestic Longhair", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
    textOutput("selected_catbreeds")
      )
   )
@@ -65,15 +68,15 @@ server <- function(input, output) {
     "This is the introduction page. Thank you for using our website!"
   })
   
-  breeds <- ({
-    p("This is the section that talks about the various cat breeds, their personalities, prices, lifespan and much more.
-    We will show an image of the selected cat breed, display important information about that particular cat breed including :
-    - Description of the Breed
-    - Average Lifespan
-    - Average Weight and Size
-    - Average Price
-    - What that Cat Breed is good with (Dogs, Kids, etc).")
-  })
+  #breeds <- ({
+   # p("This is the section that talks about the various cat breeds, their personalities, prices, lifespan and much more.
+  #  We will show an image of the selected cat breed, display important information about that particular cat breed including :
+   # - Description of the Breed
+    #- Average Lifespan
+    #- Average Weight and Size
+    #- Average Price
+    #- What that Cat Breed is good with (Dogs, Kids, etc).")
+  #})
   
   vets <- ({
     "This is the page where you can find vets nearby for all of your cat's needs!"
