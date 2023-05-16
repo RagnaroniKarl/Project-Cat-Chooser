@@ -28,7 +28,7 @@ ui <- fluidPage(
                   
                   
   #Introduction Tab                
-                  tabPanel("Introduction", strong("This is the introduction page. Thank you for using our website!"), textOutput("introduction")),
+                  tabPanel("Introduction", strong("This is the introduction page. Thank you for using our website!")),
                   
                   
                   
@@ -93,9 +93,9 @@ server <- function(input, output) {
     "This is the About Us page. Feel free to learn more about us, the reason behind this site and more"
   })
   
-  output$introduction <- renderPrint({
-    introduction
-  })
+  #output$introduction <- renderPrint({
+    #introduction
+  #})
   
   output$breeds <- renderPrint({
     breeds
