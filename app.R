@@ -3,6 +3,7 @@
 
 library(shiny)
 library(leaflet)
+library(shinydashboard)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -23,6 +24,7 @@ ui <- fluidPage(
     #Main panel with tabs
     mainPanel(
       tabsetPanel(type = "tab", 
+                  
                   
                   
   #Introduction Tab                
@@ -46,17 +48,18 @@ ui <- fluidPage(
     p("- What that Cat Breed is good with (Dogs, Kids, etc)."),
     selectInput("catbreeds", h3("Select your cat breed :"),
                 choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Birman", "Bombay", "British Shorthair", "Devon Rex", "Domestic Longhair", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
-    #textOutput("selected_catbreeds")
+    textOutput("selected_catbreeds")
     ),
   #Vets near me tab!
-                  tabPanel("Vetenarians Near Me", p("This is the page where you can find nearby vets for all of your cat's needs!"), textOutput("vets")),
+                  tabPanel("Vetenarians Near Me", p("This is the page where you can find nearby vets for all of your cat's needs"),textOutput("vets")),
                   tabPanel("Adoption Centers Near Me",p("This is the page where you can find the nearest adoption centers to find your next best friend!"), textOutput("adoption")),
+                  tabPanel("Random Cat Facts", p("These are some random cat facts you may find very interesting!"),),
                   tabPanel("About Us",p("This is the About Us page. Feel free to learn more about us, the reason behind this site and much more."), textOutput("aboutus"))),
       
   
   #selectInput("catbreeds", h3("Select your cat breed :"),
                   #choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Birman", "Bombay", "British Shorthair", "Devon Rex", "Domestic Longhair", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
-   textOutput("selected_catbreeds")
+   
      )
   )
 )
