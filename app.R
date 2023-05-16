@@ -4,12 +4,10 @@
 library(shiny)
 library(leaflet)
 library(shinydashboard)
+library(shinythemes)
 
 # Define UI for application that draws a histogram
-ui <- fluidPage(
-  tags$style(".container-fluid {
-                             background-color: #47ADF0;
-              }"),
+ui <- fluidPage(theme = shinytheme("cyborg"),
   
   
   # Application title
