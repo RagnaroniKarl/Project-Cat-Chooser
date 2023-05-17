@@ -36,7 +36,14 @@ ui <- fluidPage(theme = shinytheme("cyborg"),
                   
                   
   #Introduction Tab  
-  ## ("Welcome to our web application, your ultimate destination for everything cat-related. Whether you're a proud cat owner, a cat enthusiast, or someone looking to learn more about these fascinating creatures, you've come to the right place.
+  
+
+
+
+
+
+
+                  tabPanel("Introduction", strong("Welcome to our web application, your ultimate destination for everything cat-related. Whether you're a proud cat owner, a cat enthusiast, or someone looking to learn more about these fascinating creatures, you've come to the right place.
 
 Our application is designed to provide you with a comprehensive experience when it comes to cat knowledge, veterinary services, and information about different cat breeds. Whether you're seeking advice on daily care, health, nutrition, or cat behavior, our application is filled with reliable resources and informative content written by experts.
 
@@ -48,14 +55,7 @@ Additionally, our application offers a dedicated section on different cat breeds
 
 Join our community of cat lovers today and dive into the wonderful world of these adorable felines. Download our application and access a wealth of information, trusted veterinary resources, and an opportunity to adopt a feline companion that will brighten your life.
 
-Welcome to the world of cats!")
-
-
-
-
-
-
-                  tabPanel("Introduction", strong("This is the introduction page. Thank you for using our website!")),
+Welcome to the world of cats!")),
                   
                   
                   
