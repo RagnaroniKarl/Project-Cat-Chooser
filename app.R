@@ -73,7 +73,8 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                          p("- What that Cat Breed is good with (Dogs, Kids, etc)."),
                                          selectInput("catbreeds", h3("Select your cat breed :"),
                                                      choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Birman", "Bombay", "British Shorthair", "Devon Rex", "Domestic Longhair", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
-                                         textOutput("selected_catbreeds")
+                                         textOutput("selected_catbreeds"),
+                                         uiOutput(("catbreedimage")),
                                 ),
                                 #Vets near me tab!
                                 tabPanel("Vetenarians Near Me", p("This is the page where you can find nearby vets for all of your cat's needs")),
