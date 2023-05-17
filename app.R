@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 
 #package necessary to intall in order to run our app 
@@ -10,6 +11,8 @@
 
 
 
+=======
+>>>>>>> Stashed changes
 #this is the cat chooser shiny page
 
 library(shiny)
@@ -18,12 +21,20 @@ library(shinydashboard)
 library(shinythemes)
 
 # Define UI for application that draws a histogram
+<<<<<<< Updated upstream
 ui <- fluidPage(theme = shinytheme("cyborg"),
+=======
+ui <- fluidPage(theme = shinytheme("sandstone"),
+>>>>>>> Stashed changes
                 
                 
                 # Application title
                 titlePanel(
+<<<<<<< Updated upstream
                   h1("Welcome to CatChooser.com!", style = "color:cyan", align = 'center'),
+=======
+                  h1("Welcome to CatChooser.com!", style = "color:#FFD700", align = 'center'),
+>>>>>>> Stashed changes
                 ),
                 
                 #Sidebar panel
@@ -36,6 +47,7 @@ ui <- fluidPage(theme = shinytheme("cyborg"),
                                 
                                 
                                 
+<<<<<<< Updated upstream
                                 #Introduction Tab  
                                 
                                 tabPanel("Introduction", p("Welcome to our web application, your ultimate destination for everything cat-related."),
@@ -52,6 +64,10 @@ ui <- fluidPage(theme = shinytheme("cyborg"),
 Join our community of cat lovers today and dive into the wonderful world of these adorable felines. Download our application and access a wealth of information, trusted veterinary resources, and an opportunity to adopt a feline companion that will brighten your life.
 
 Welcome to the world of cats!")),
+=======
+                                #Introduction Tab                
+                                tabPanel("Introduction", strong("This is the introduction page. Thank you for using our website!")),
+>>>>>>> Stashed changes
                                 
                                 
                                 
