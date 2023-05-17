@@ -33,8 +33,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                   #Main panel with tabs
                   mainPanel(
                     tabsetPanel(type = "tab", 
-                                
-                                
+                              
                                 
                                 #Introduction Tab  
                                 
@@ -87,7 +86,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                 )
 )
 
-#outputs
+#outputs 
 server <- function(input, output) {
   
   introduction <- ({
