@@ -1,3 +1,5 @@
+
+
 #package necessary to intall in order to run our app 
 
 #install.packages("shiny")
@@ -73,10 +75,10 @@ Welcome to the world of cats!")),
                                          textOutput("selected_catbreeds")
                                 ),
                                 #Vets near me tab!
-                                tabPanel("Vetenarians Near Me", p("This is the page where you can find nearby vets for all of your cat's needs"),textOutput("vets")),
-                                tabPanel("Adoption Centers Near Me",p("This is the page where you can find the nearest adoption centers to find your next best friend!"), textOutput("adoption")),
+                                tabPanel("Vetenarians Near Me", p("This is the page where you can find nearby vets for all of your cat's needs")),
+                                tabPanel("Adoption Centers Near Me",p("This is the page where you can find the nearest adoption centers to find your next best friend!")),
                                 tabPanel("Random Cat Facts", p("These are some random cat facts you may find very interesting!"),),
-                                tabPanel("About Us",p("This is the About Us page. Feel free to learn more about us, the reason behind this site and much more."), textOutput("aboutus"))),
+                                tabPanel("About Us",p("This is the About Us page. Feel free to learn more about us, the reason behind this site and much more."))),
                     
                     
                     #selectInput("catbreeds", h3("Select your cat breed :"),
