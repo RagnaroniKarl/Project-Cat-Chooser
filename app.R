@@ -50,9 +50,9 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                     p("We understand that your cat's health is a top priority. That's why our application also allows you to find veterinarians specialized in feline care near your location. You can explore veterinarian profiles, read customer reviews, and book appointments online, all with just a few clicks."),
                                     br(),
                                     p("Additionally, our application offers a dedicated section on different cat breeds. Whether you're curious to discover the unique characteristics of certain breeds or want to learn more about the history and evolution of cats, our informative content will provide you with the answers you seek.
-Join our community of cat lovers today and dive into the wonderful world of these adorable felines. Download our application and access a wealth of information, trusted veterinary resources, and an opportunity to adopt a feline companion that will brighten your life.
+                                    Join our community of cat lovers today and dive into the wonderful world of these adorable felines. Download our application and access a wealth of information, trusted veterinary resources, and an opportunity to adopt a feline companion that will brighten your life.
 
-Welcome to the world of cats!")),
+                                    Welcome to the world of cats!")),
                                 
                                 
                                 
@@ -81,8 +81,7 @@ Welcome to the world of cats!")),
                                 tabPanel("About Us",p("This is the About Us page. Feel free to learn more about us, the reason behind this site and much more."))),
                     
                     
-                    #selectInput("catbreeds", h3("Select your cat breed :"),
-                    #choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Birman", "Bombay", "British Shorthair", "Devon Rex", "Domestic Longhair", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
+                    
                     
                   )
                 )
