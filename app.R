@@ -1,5 +1,3 @@
-
-
 #package necessary to intall in order to run our app 
 
 #install.packages("shiny")
@@ -18,12 +16,12 @@ library(shinydashboard)
 library(shinythemes)
 
 # Define UI for application that draws a histogram
-ui <- fluidPage(theme = shinytheme("sandstone"),
+ui <- fluidPage(theme = shinytheme("darkly"),
                 
                 
                 # Application title
                 titlePanel(
-                  h1("Welcome to CatChooser.com!", style = "color:cyan", align = 'center'),
+                  h1("Welcome to CatChooser.com!", style = "color:green", align = 'center'),
                 ),
                 
                 #Sidebar panel
