@@ -12,7 +12,7 @@ ui <- fluidPage(theme = shinytheme("cyborg"),
   
   # Application title
   titlePanel(
-    h1("Welcome to CatChooser.com!", style = "color:red", align = 'center'),
+    h1("Welcome to CatChooser.com!", style = "color:cyan", align = 'center'),
   ),
   
   #Sidebar panel
