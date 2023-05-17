@@ -101,6 +101,54 @@ ui <- fluidPage(theme = shinytheme("darkly"),
 #outputs 
 server <- function(input, output) {
   
+  #image display loop for cat breeds
+  
+  output$catbreedimage <- renderUI({
+   if(input$catbreeds == "Abyssinian"){
+     img(height = 240, width = 300, src = "abyssinian.jpg")
+   } else if (input$catbreeds == "American Bobtail") {
+     img(height = 200, width = 300, src = "american-bobtail.jpg")
+   } else if (input$catbreeds == "American Shorthair") {
+     img(height = 200, width = 300, src = "american-shorthair.jpg")
+   } else if (input$catbreeds == "Balinese") {
+     img(height = 200, width = 300, src = "balinese.jpg")
+   } else if (input$catbreeds == "Bengal") {
+     img(height = 200, width = 300, src = "bengal.jpg")
+   } else if (input$catbreeds == "Birman") {
+     img(height = 200, width = 300, src = "birman.jpg")
+   } else if (input$catbreeds == "Bombay") {
+     img(height = 200, width = 300, src = "bombay.jpg")
+   } else if (input$catbreeds == "British Shorthair") {
+     img(height = 200, width = 300, src = "british-shorthair.jpg")
+   } else if (input$catbreeds == "Devon Rex") {
+     img(height = 200, width = 300, src = "devon-rex.jpg")
+   } else if (input$catbreeds == "Domestic Longhair") {
+     img(height = 200, width = 300, src = "domestic-longhair.jpg")
+   } else if (input$catbreeds == "Exotic Shorthair") {
+     img(height = 200, width = 300, src = "exotic-shorthair")
+   } else if (input$catbreeds == "Himalayan") {
+     img(height = 200, width = 300, src = "himalayan.jpg")
+   } else if (input$catbreeds == "Maine Coon") {
+     img(height = 200, width = 300, src = "maine-coon.jpg")
+   } else if (input$catbreeds == "Norwegian Forest") {
+     img(height = 200, width = 300, src = "kitten-adoption.jpg")
+   } else if (input$catbreeds == "Persian") {
+     img(height = 200, width = 300, src = "persian.jpg")
+   } else if (input$catbreeds == "Ragdoll") {
+     img(height = 200, width = 300, src = "ragdoll.jpg")
+   } else if (input$catbreeds == "Savannah") {
+     img(height = 200, width = 300, src = "savannah.jpg")
+   } else if (input$catbreeds == "Scottish Fold") {
+     img(height = 200, width = 300, src = "scottish-fold.jpg")
+   } else if (input$catbreeds == "Siamese") {
+     img(height = 200, width = 300, src = "kitten-adoption.jpg")
+   } else if (input$catbreeds == "Sphynx") {
+     img(height = 200, width = 300, src = "sphynx.jpg")
+   } else {
+     img(height = 200, width = 300, src = "kitten-adoption.jpg")
+   }
+  
+  
   introduction <- ({
     "This is the introduction page. Thank you for using our website!"
   })
