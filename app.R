@@ -16,6 +16,8 @@ library(shiny)
 library(leaflet)
 library(shinydashboard)
 library(shinythemes)
+library(rvest)
+library(dplyr)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(theme = shinytheme("darkly"),
@@ -38,7 +40,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                 
                                 #Introduction Tab  
                                 
-                                tabPanel("Introduction", p("Welcome to our web application, your ultimate destination for everything cat-related."),
+                                tabPanel("Introduction", h4("Welcome to our web application, your ultimate destination for everything cat-related."),
                                     br(),
                                     p("Whether you're a proud cat owner, a cat enthusiast, or someone looking to learn more about these fascinating creatures, you've come to the right place."),
                                     br(),
@@ -76,8 +78,18 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                 ),
                                 #Vets near me tab!
                                 tabPanel("Vetenarians Near Me", p("This is the page where you can find nearby vets for all of your cat's needs")),
+                               
+                                
+                                
+                                
+                                
+                                
+                                #Adoptions Centers
                                 tabPanel("Adoption Centers Near Me",p("This is the page where you can find the nearest adoption centers to find your next best friend!")),
+                                
+                                #Random Cat Facts
                                 tabPanel("Random Cat Facts", p("These are some random cat facts you may find very interesting!"),),
+                                #About us 
                                 tabPanel("About Us",p("This is the About Us page. Feel free to learn more about us, the reason behind this site and much more."))),
                     
                     
