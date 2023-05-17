@@ -1,4 +1,14 @@
 
+#package necessary to intall in order to run our app 
+
+install.packages("shiny")
+install.packages("leaflet")
+install.packages("shinydashboard")
+install.packages("shinythemes")
+
+
+
+
 #this is the cat chooser shiny page
 
 library(shiny)
