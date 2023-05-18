@@ -146,7 +146,6 @@ server <- function(input, output) {
    } else if (input$catbreeds == "Sphynx") {
      img(height = 200, width = 300, src = "sphynx.jpg")
    } else {
-     img(height = 200, width = 300, src = "kitten-adoption.jpg")
    }
   
   
