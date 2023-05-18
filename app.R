@@ -29,11 +29,11 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                 ),
                 
                 #Sidebar panel
-                sidebarLayout(
-                  sidebarPanel(),
+                #sidebarLayout(
+                  #sidebarPanel(),
                   
                   #Main panel with tabs
-                  mainPanel(
+                  #mainPanel(
                     tabsetPanel(type = "tab", 
                               
                                 
@@ -95,8 +95,8 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                     
                     
                     
-                  )
-                )
+                  #)
+                #)
 )
 
 #outputs 
