@@ -35,11 +35,12 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                   #Main panel with tabs
                   #mainPanel(
                     tabsetPanel(type = "tab", 
-                              
+                                
+                                
                                 
                                 #Introduction Tab  
                                 
-                                tabPanel("Introduction", h4("Welcome to our web application, your ultimate destination for everything cat-related."),
+                                tabPanel("Introduction", h4("Welcome to our web application, your ultimate destination for everything cat-related.", style = "color:green"),
                                     br(),
                                     p("Whether you're a proud cat owner, a cat enthusiast, or someone looking to learn more about these fascinating creatures, you've come to the right place."),
                                     br(),
@@ -59,22 +60,16 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                 
                                 
                                 #Cat Breeds Tab 
-                                tabPanel("Different Cat Breeds",p("This is the section that talks about the various cat breeds, their personalities, prices, lifespan and much more.
-    We will show an image of the selected cat breed, display important information about that particular cat breed including : "), 
-                                         br(),                      
-                                         p("- Description of the Breed"),
+                                tabPanel("Different Cat Breeds",
+                                         h4("This is the section where we provide information about each cat breed from their look, their personalities, prices to their lifespan and much more.", style = "color:green"),
                                          br(),
-                                         p("- Average Lifespan"),
+    p("We will show an image of the selected cat breed, display important information about that particular cat breed including : Description of the Breed, Average Lifespan, Average Weight and Size, Average Price, What that Cat Breed is good with (Dogs, Kids, etc)."),
                                          br(),
-                                         p("- Average Weight and Size"),
-                                         br(),
-                                         p("- Average Price"),
-                                         br(),
-                                         p("- What that Cat Breed is good with (Dogs, Kids, etc)."),
                                          selectInput("catbreeds", h3("Select your cat breed :"),
-                                                     choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Birman", "Bombay", "British Shorthair", "Devon Rex", "Domestic Longhair", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
+                                                choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Birman", "Bombay", "British Shorthair", "Devon Rex", "Domestic Longhair", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
                                          textOutput("selected_catbreeds"),
-                                         uiOutput(("catbreedimage")),
+                                         br(),
+                                         uiOutput(("catbreedimage")), 
                                 ),
                                 #Vets near me tab!
                                 tabPanel("Vetenarians Near Me", p("This is the page where you can find nearby vets for all of your cat's needs")),
@@ -95,108 +90,114 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                     
                     
                     
-                  #)
+                 # )
                 #)
 )
 
-#outputs 
+#outputs
 server <- function(input, output) {
   
   #image display loop for cat breeds
   
   output$catbreedimage <- renderUI({
    if(input$catbreeds == "Abyssinian"){
+     
      img(height = 240, width = 300, src = "abyssinian.jpg")
+     
    } else if (input$catbreeds == "American Bobtail") {
+     
      img(height = 200, width = 300, src = "american-bobtail.jpg")
+     
    } else if (input$catbreeds == "American Shorthair") {
+     
      img(height = 200, width = 300, src = "american-shorthair.jpg")
+     
    } else if (input$catbreeds == "Balinese") {
+     
      img(height = 200, width = 300, src = "balinese.jpg")
+     
    } else if (input$catbreeds == "Bengal") {
+     
      img(height = 200, width = 300, src = "bengal.jpg")
+     
    } else if (input$catbreeds == "Birman") {
+     
      img(height = 200, width = 300, src = "birman.jpg")
+     
    } else if (input$catbreeds == "Bombay") {
+     
      img(height = 200, width = 300, src = "bombay.jpg")
+     
    } else if (input$catbreeds == "British Shorthair") {
+     
      img(height = 200, width = 300, src = "british-shorthair.jpg")
+     
    } else if (input$catbreeds == "Devon Rex") {
+     
      img(height = 200, width = 300, src = "devon-rex.jpg")
+     
    } else if (input$catbreeds == "Domestic Longhair") {
+     
      img(height = 200, width = 300, src = "domestic-longhair.jpg")
+     
    } else if (input$catbreeds == "Exotic Shorthair") {
+     
      img(height = 200, width = 300, src = "exotic-shorthair")
+     
    } else if (input$catbreeds == "Himalayan") {
+     
      img(height = 200, width = 300, src = "himalayan.jpg")
+     
    } else if (input$catbreeds == "Maine Coon") {
+     
      img(height = 200, width = 300, src = "maine-coon.jpg")
+     
    } else if (input$catbreeds == "Norwegian Forest") {
+     
      img(height = 200, width = 300, src = "kitten-adoption.jpg")
+     
    } else if (input$catbreeds == "Persian") {
+     
      img(height = 200, width = 300, src = "persian.jpg")
+     
    } else if (input$catbreeds == "Ragdoll") {
+     
      img(height = 200, width = 300, src = "ragdoll.jpg")
+     
    } else if (input$catbreeds == "Savannah") {
+     
      img(height = 200, width = 300, src = "savannah.jpg")
+     
    } else if (input$catbreeds == "Scottish Fold") {
+     
      img(height = 200, width = 300, src = "scottish-fold.jpg")
+     
    } else if (input$catbreeds == "Siamese") {
+     
      img(height = 200, width = 300, src = "kitten-adoption.jpg")
+     
    } else if (input$catbreeds == "Sphynx") {
+     
      img(height = 200, width = 300, src = "sphynx.jpg")
+     
    } else {
+     
    }
-  
-  
-  introduction <- ({
-    "This is the introduction page. Thank you for using our website!"
+      
+    
   })
   
-  #breeds <- ({
-  # p("This is the section that talks about the various cat breeds, their personalities, prices, lifespan and much more.
-  #  We will show an image of the selected cat breed, display important information about that particular cat breed including :
-  # - Description of the Breed
-  #- Average Lifespan
-  #- Average Weight and Size
-  #- Average Price
-  #- What that Cat Breed is good with (Dogs, Kids, etc).")
-  #})
-  
-  vets <- ({
-    "This is the page where you can find vets nearby for all of your cat's needs!"
-  })
-  
-  adoption <- ({
-    "This is the page where you can find the nearest adoption centers to find your next best friend!"
-  })
-  
-  aboutus <- ({
-    "This is the About Us page. Feel free to learn more about us, the reason behind this site and more"
-  })
-  
-  #output$introduction <- renderPrint({
-  #introduction
-  #})
-  
-  output$breeds <- renderPrint({
-    breeds
-  })
-  
-  output$vets <- renderPrint({
-    vets
-  })
-  
-  output$adoption <- renderPrint({
-    adoption
-  })
-  
-  output$aboutus <- renderPrint({
-    aboutus
-  })
+  #prints the name of the cat breed selected
   
   output$selected_catbreeds <- renderText({
+    
+    if(input$catbreeds == "         "){
+      
+    }else{
+
     paste("You have selected the ", input$catbreeds)
+      
+    }
   })
   
 }
