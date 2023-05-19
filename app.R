@@ -272,11 +272,64 @@ server <- function(input, output) {
         
       } else if (input$catbreeds == "Balinese"){
         
-        p("")
+        p("The Balinese looks like a long haired Siamese cat due to a genetic mutation that caused some Siamese to grow longer fur. For their colors, they have the distinctly Siamese look of the white or cream colored body with darker, usually dark brown or grey brown, accents on the face, ears, legs and tail. As for their eyes, they have deep blue eyes that all Siamese cats possess.",
+          br(),
+          br(),
+          "The Balinese has a life expectancy of 12 to 20 years depending on the care of the owner. They can be about 45 cm long in length. When it goes to weight, they can weigh between 3.6 and about 5 kilos. Being related to the Siamese family, the Balinese is a rather noisy cat and they will shed a lot of fur. They are considered hypoallergenic cats. The average Balinese can cost you between CHF400 to CHF1'500.",
+          br(),
+          br(),
+          h4("Health Issues : "),
+          "The Balinese, being related to the Siamese is prone to many of the same health conditions as the Siamese. Such health conditions are :",
+          br(),
+          br(), 
+          "Eye problems : Progressive Retinal Atrophy is one of the most common health condition found in Balinese cats. They are also prone to being cross-eyed.",
+          br(),
+          br(),
+          "Liver Amyloidosis (This is when the amyloid proteins are deposited in the liver and reduces liver function and can lead to liver failure",
+          br(),
+          br(),
+          "Respiratory Issues",
+          br(),
+          br(),
+          "Neurological issues : They are prone to Hyperesthesia syndrome which makes them groom themselves excessively and Nystagmus which results in rapid eye movement.",
+          br(),
+          br(),
+          "Heart problems",
+          br(),
+          br(),
+          "If you have worries about your cat's health, please consult our vetenarian page to find a practician to help you!",
+          br(),
+          br(), 
+          "If you want to learn more about the Balinese, please consult the following site : ",
+          a("The Cat Fanciers' Association", href = "https://cfa.org/balinese/"))
+        
         
       } else if (input$catbreeds == "Bengal"){
         
-        p("")
+        p("The Bengal cat is a relatively new cat breed, being created when a breeder crossed a Domestic Shorthair with an Asian Leopard cat in the early 1960s. Thanks to its relation to the Asian Leopard cat, the Bengal has inherited many features of that cat. Such features are their leopard-like spots on their fur. These spots can come in many colors including rust, chocolate brown or black. Meanwhile, their coat can be a golden color, sand, orange, rust or brown. It is said that some Bengal cats have fur that shimmers in the sunlight. Their eyes can be either gold or green.",
+          br(),
+          br(), 
+          "The Bengal can live up to 15 years if well taken care of. They can be about 45 cm in length and weigh around 5.5 kilos but some can weigh up to 9 kilos. They are not hypoallergenic cats. They are moderately talkative and go well with pets and little kids. The Bengal cat is on the more expensive end of cat breeds, ranging from CHF1'500 to CHF3'000",
+          br(),
+          br(),
+          h4("Health Issues : "),
+          "The Bengal is prone to a few health conditions :",
+          br(),
+          br(), 
+          "Autosomal recessive disorder : this causes early blindness in young cats",
+          br(),
+          br(),
+          "Entropion : the rolling in of the eyelids",
+          br(),
+          br(),
+          "Feline infectious peritonitis, a deadly disease that results from infection by the coronavirus",
+          br(),
+          br(),
+          "If you have worried about your cat's health and how to take care of them, please consult our vetenarian page to find a practician to help you!",
+          br(),
+          br(),
+          "If you are interested in learning more about the Bengal cat, please consult the following site : ",
+          a("The Cat Fanciers' Association", href = "https://cfa.org/bengal/"))
         
       } else if (input$catbreeds == "Birman"){
         
