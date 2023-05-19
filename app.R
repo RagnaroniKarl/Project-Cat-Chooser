@@ -24,7 +24,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                 
                 # Application title
                 titlePanel(
-                  h1("Welcome to CatChooser.com!", style = "color:#00FF80", align = 'center', img(src = "cat-paw-1.jpg", height = 50, width = 100, align = 'left'), img(src = "cat-paw-3.jpg", height = 50, width = 100, align = 'right'))
+                  h1("Welcome to CatChooser.com!", style = "color:orange", align = 'center', img(src = "cat-paw-1.jpg", height = 50, width = 100, align = 'left'), img(src = "cat-paw-3.jpg", height = 50, width = 100, align = 'right'))
                 ),
                 
                 #Sidebar panel
@@ -42,7 +42,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             tabPanel("Introduction",
                                      div(
                                        style = "text-align: justify;",
-                                       h3("Welcome to our web application, your ultimate destination for everything cat-related.", style = "color:green"),
+                                       h3("Welcome to our web application, your ultimate destination for everything cat-related.", style = "color:orange"),
                                        br(),
                                        p("Whether you're a proud cat owner, a cat enthusiast, or someone looking to learn more about these fascinating creatures, you've come to the right place."),
                                        br(),
@@ -66,7 +66,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             
                             #Cat Breeds Tab 
                             tabPanel("Different Cat Breeds",
-                                     h3("This is the section where we provide information about each cat breed from their look, their personalities, prices to their lifespan and much more.", style = "color:green"),
+                                     h3("This is the section where we provide information about each cat breed from their look, their personalities, prices to their lifespan and much more.", style = "color:orange"),
                                      br(),
                                      p("We will show an image of the selected cat breed, display important information about that particular cat breed including : Description of the Breed, Average Lifespan, Average Weight and Size, Average Price, What that Cat Breed is good with (Dogs, Kids, etc)."),
                                      selectInput("catbreeds", h3("Select your cat breed :"),
@@ -78,7 +78,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      uiOutput("catbreedinfo"),
                             ),
                             #Vets near me tab!
-                            tabPanel("Vetenarians Near Me", h3("This is where you can find local vets in your area!", style = "color:green")),
+                            tabPanel("Vetenarians Near Me", h3("This is where you can find local vets in your area!", style = "color:orange")),
                             
                             
                             
@@ -86,16 +86,16 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             
                             
                             #Adoptions Centers
-                            tabPanel("Adoption Centers Near Me", h3("If you're looking for a new friend, this is the right place to look!", style = "color:green")),
+                            tabPanel("Adoption Centers Near Me", h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange")),
                             
                             #Random Cat Facts
-                            tabPanel("Random Cat Facts", h3("Here are some random cat facts you may find very interesting!", style = "color:green"),),
+                            tabPanel("Random Cat Facts", h3("Here are some random cat facts you may find very interesting!", style = "color:orange"),),
                             
                             #About us 
                             tabPanel("About Us",
                                      br(),
                                      br(),
-                                     h3("Get to know about us and meet incredible the team", style = "color:green"),
+                                     h3("Get to know about us and meet incredible the team", style = "color:orange"),
                                      br() ,
                                      br() ,
                                      p("Whether you're a proud cat owner, a cat enthusiast, or someone looking to learn more about these fascinating creatures, you've come to the right place. Our application is designed to provide you with a comprehensive experience when it comes to cat knowledge, veterinary services, and information about different cat breeds."),
