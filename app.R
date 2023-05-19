@@ -92,14 +92,40 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             tabPanel("Random Cat Facts", h3("Here are some random cat facts you may find very interesting!", style = "color:green"),),
                             
                             #About us 
-                            tabPanel("About Us",h3("Get to know about us and meet incredible the team", style = "color:green"))),
+                            tabPanel("About Us",
+                                     br(),
+                                     br(),
+                                     h3("Get to know about us and meet incredible the team", style = "color:green"),
+                                     br() ,
+                                     br() ,
+                                     p("Whether you're a proud cat owner, a cat enthusiast, or someone looking to learn more about these fascinating creatures, you've come to the right place. Our application is designed to provide you with a comprehensive experience when it comes to cat knowledge, veterinary services, and information about different cat breeds."),
+                                     p("At CatChooser.com, we understand the special bond between humans and their feline companions. That's why we've created an application filled with reliable resources and informative content written by experts. Whether you're seeking advice on daily care, health, nutrition, or cat behavior, our goal is to empower you with the knowledge you need to provide the best care for your furry friends."),
+                                     br(),
+                                     h4("Key Features of Our Application:"),
+                                     br(),
+                                     p("1. Cat Adoption: One of the key features of our application is the ability to find cats available for adoption. We work closely with shelters and animal protection associations to help you find the perfect feline companion for your home. Discover the joy of giving a loving home to a cat in need."),
+                                     p("2. Find Local Veterinarians: We understand that your cat's health is a top priority. That's why our application allows you to find veterinarians specialized in feline care near your location. Explore veterinarian profiles, read customer reviews, and conveniently book appointments online with just a few clicks."),
+                                     p("3. Explore Cat Breeds: Our application offers a dedicated section on different cat breeds. Whether you're curious to discover the unique characteristics of certain breeds or want to learn more about the history and evolution of cats, our informative content will provide you with the answers you seek."),
+                                     br(),
+                                     h4("Join Our Community of Cat Lovers:"),
+                                     br(),
+                                     p("CatChooser.com is more than just an application…it's a community of cat lovers. Connect with fellow cat enthusiasts, share stories, and exchange valuable insights. Our goal is to create a space where cat lovers can come together to celebrate the wonderful world of these adorable felines."),
+                                     br(),
+                                     br(),
+                                     h4("Meet the Our Ailurophile Team:"),
+                                     br(),
+                                     p(""),
+                                     
+                            )
+                )
+)
                 
                 
                 
                 
                 # )
                 #)
-)
+
 
 #outputs
 server <- function(input, output) {
