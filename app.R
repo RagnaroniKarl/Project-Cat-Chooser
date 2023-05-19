@@ -43,7 +43,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                 tabPanel("Introduction",
                                          div(
                                            style = "text-align: justify;",
-                                           h4("Welcome to our web application, your ultimate destination for everything cat-related.", style = "color:green"),
+                                           h3("Welcome to our web application, your ultimate destination for everything cat-related.", style = "color:green"),
                                            br(),
                                            p("Whether you're a proud cat owner, a cat enthusiast, or someone looking to learn more about these fascinating creatures, you've come to the right place."),
                                            br(),
@@ -71,7 +71,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                          br(),
     p("We will show an image of the selected cat breed, display important information about that particular cat breed including : Description of the Breed, Average Lifespan, Average Weight and Size, Average Price, What that Cat Breed is good with (Dogs, Kids, etc)."),
                                          selectInput("catbreeds", h3("Select your cat breed :"),
-                                                choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Birman", "Bombay", "British Shorthair", "Devon Rex", "Domestic Longhair", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
+                                                choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Bombay", "British Shorthair", "Devon Rex", "Domestic Longhair", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
                                          textOutput("selected_catbreeds"),
                                          br(),
                                          uiOutput(("catbreedimage")), 
@@ -127,10 +127,6 @@ server <- function(input, output) {
    } else if (input$catbreeds == "Bengal") {
      
      img(height = 200, width = 300, src = "bengal.jpg")
-     
-   } else if (input$catbreeds == "Birman") {
-     
-     img(height = 200, width = 300, src = "birman.jpg")
      
    } else if (input$catbreeds == "Bombay") {
      
@@ -191,16 +187,8 @@ server <- function(input, output) {
    } else {
      
    }
-<<<<<<< HEAD
-  }
-
-  
-  introduction <- ({
-    "This is the introduction page. Thank you for using our website!"
-=======
       
     
->>>>>>> 98a7247d0d7bb52ca282b67c4154efff6319b853
   })
   
   #prints the name of the cat breed selected
@@ -214,16 +202,19 @@ server <- function(input, output) {
     #paste("You have selected the ", input$catbreeds, ".")
       
     #}
-    #I decided to torture my retarded ass here...
+    #Information about the various cat breeds
     output$catbreedinfo <- renderUI({
       if(input$catbreeds == "Abyssinian"){
         
-        p("The Abyssinian cat is believed to be the cat breed once owned by the kings of Ancient Egypt : the Pharaohs, however some people believe they are the result of Victorian English catbreeders where the name comes from, they were imported from Abyssinia, today's Ethiopia. The Abyssinian is a short haired cat that doesn't shed. It's color can best be described as a reddish-brown or 'ruddy' base with black ticking, a trait of tabby cats. It has either green or gold/sulfrur eyes", 
+        
+        p(style = "text-align : justify;",
+        "The Abyssinian cat is believed to be the cat breed once owned by the kings of Ancient Egypt : the Pharaohs, however some people believe they are the result of Victorian English catbreeders where the name comes from, they were imported from Abyssinia, today's Ethiopia. The Abyssinian is a short haired cat that doesn't shed. It's color can best be described as a reddish-brown or 'ruddy' base with black ticking, a trait of tabby cats. It has either green or gold/sulfrur eyes", 
         br(), 
         br(), 
         "The Abyssinian has a lifespan of about 9 to 15 years. They can be between 30 and 40 cm in length. Unfortunately for some, it is a somewhat hypoallergenic cat. They are friendly with kids and even get along with pets, they make generally good family cats. They tend to be more on the quiet end, with a low tendency to vocalize. The average price of an Abyssinian ranges from CHF500 to CHF1'200.", 
         br(), 
         br(), 
+        h4("Health Issues : "),
         "The Abyssinian is generally healthy however they do have a few common problems, three in particular :", 
         br(), 
         br(), 
@@ -244,12 +235,14 @@ server <- function(input, output) {
         
       } else if (input$catbreeds == "American Bobtail"){
         
-        p("The American Bobbtail cat is immediately recognizable by its short tai, generally between one third to one half the size of a regular cat tail, and lynx-like features. In terms of their colors, they have all the standard cat colors like grey, black, orange and white however breeders prefer to give them the colors that make them look like their wild counterparts. It is believed that they came into existance in the late 1960s because of efforts by breeders. When it goes to their eye color, they can have all the standard colors such as green, blue, gold/sulfur and copper.", 
+        p(style = "text-align : justify;", 
+        "The American Bobbtail cat is immediately recognizable by its short tai, generally between one third to one half the size of a regular cat tail, and lynx-like features. In terms of their colors, they have all the standard cat colors like grey, black, orange and white however breeders prefer to give them the colors that make them look like their wild counterparts. It is believed that they came into existance in the late 1960s because of efforts by breeders. When it goes to their eye color, they can have all the standard colors such as green, blue, gold/sulfur and copper.", 
           br(), 
           br(), 
           "The American Bobtail cat has an expected lifespan of 13 to 18 years. They can be up to 76 cm in length, male American Bobtail cats will be larger than their female counterparts. They can weigh up to 7.25 kilograms. They are not hypoallergenic cats. American Bobtails are prone to moderate shedding and can be moderately talkative. The average price for an American Bobtail cat is between CHF600 and CHF1200.", 
           br(), 
           br(), 
+          h4("Health Issues : "),
           "Like most cats, they are relatively healthy but have some common health conditions associated with the breed :", 
           br(), 
           br(), 
@@ -267,11 +260,14 @@ server <- function(input, output) {
         
       } else if (input$catbreeds == "American Shorthair"){
         
-        p("The American Shorthair is a cat that can trace its origins to the European settlers that moved to North America. They were valued on the ships for that rodent hunting abilities. Some were even belived to be present on the famous, to Americans of course, Mayflower ship. For this and many other reasons, they are one of the most popular cat breeds on the North American continent. For coloring, they can be white, silver (light grey), black, cream, brown and red. These colorings are found under mostly the tabby cat pattern (see image), however calico, tortoiseshell, bi-color and solid do exist. Their eyes can be gold, blue, copper or green.", 
+        p(style = "text-align : justify;",
+        "The American Shorthair is a cat that can trace its origins to the European settlers that moved to North America. They were valued on the ships for that rodent hunting abilities. Some were even belived to be present on the famous, to Americans of course, Mayflower ship. For this and many other reasons, they are one of the most popular cat breeds on the North American continent. For coloring, they can be white, silver (light grey), black, cream, brown and red. These colorings are found under mostly the tabby cat pattern (see image), however calico, tortoiseshell, bi-color and solid do exist. Their eyes can be gold, blue, copper or green.", 
           br(), 
-          br(), "The American Shorthaire can live up to 15 to 20 years if well taken care of. They can be between 30 and 38 cm in legth and can weigh between 4.5 and 6.8 kilograms. American Shorthair cats are not hypoallergenic cats so people with allergies should go well with them. They are moderately prone to shedding and vocalizing and they are very family friendly cats being good with little kids and other pets. When it comes to price, the American Shorthair is more afforable than many other cats on this site, ranging from CHF500 to CHF800.", 
+          br(), 
+          "The American Shorthair can live up to 15 to 20 years if well taken care of. They can be between 30 and 38 cm in legth and can weigh between 4.5 and 6.8 kilograms. American Shorthair cats are not hypoallergenic cats so people with allergies should go well with them. They are moderately prone to shedding and vocalizing and they are very family friendly cats being good with little kids and other pets. When it comes to price, the American Shorthair is more afforable than many other cats on this site, ranging from CHF500 to CHF800.", 
           br(), 
           br(), 
+          h4("Health Issues : "),
           "The American Shorthair cat is especially lucky in terms of its health, unlike many other breeds, they are not prone to any breed specific issues which makes them lower maintenance cats.",
           br(),
           br(), 
@@ -280,7 +276,8 @@ server <- function(input, output) {
         
       } else if (input$catbreeds == "Balinese"){
         
-        p("The Balinese looks like a long haired Siamese cat due to a genetic mutation that caused some Siamese to grow longer fur. For their colors, they have the distinctly Siamese look of the white or cream colored body with darker, usually dark brown or grey brown, accents on the face, ears, legs and tail. As for their eyes, they have deep blue eyes that all Siamese cats possess.",
+        p(style = "text-align : justify;",
+        "The Balinese looks like a long haired Siamese cat due to a genetic mutation that caused some Siamese to grow longer fur. For their colors, they have the distinctly Siamese look of the white or cream colored body with darker, usually dark brown or grey brown, accents on the face, ears, legs and tail. As for their eyes, they have deep blue eyes that all Siamese cats possess.",
           br(),
           br(),
           "The Balinese has a life expectancy of 12 to 20 years depending on the care of the owner. They can be about 45 cm long in length. When it goes to weight, they can weigh between 3.6 and about 5 kilos. Being related to the Siamese family, the Balinese is a rather noisy cat and they will shed a lot of fur. They are considered hypoallergenic cats. The average Balinese can cost you between CHF400 to CHF1'500.",
@@ -314,7 +311,8 @@ server <- function(input, output) {
         
       } else if (input$catbreeds == "Bengal"){
         
-        p("The Bengal cat is a relatively new cat breed, being created when a breeder crossed a Domestic Shorthair with an Asian Leopard cat in the early 1960s. Thanks to its relation to the Asian Leopard cat, the Bengal has inherited many features of that cat. Such features are their leopard-like spots on their fur. These spots can come in many colors including rust, chocolate brown or black. Meanwhile, their coat can be a golden color, sand, orange, rust or brown. It is said that some Bengal cats have fur that shimmers in the sunlight. Their eyes can be either gold or green.",
+        p(style = "text-align : justify;",
+          "The Bengal cat is a relatively new cat breed, being created when a breeder crossed a Domestic Shorthair with an Asian Leopard cat in the early 1960s. Thanks to its relation to the Asian Leopard cat, the Bengal has inherited many features of that cat. Such features are their leopard-like spots on their fur. These spots can come in many colors including rust, chocolate brown or black. Meanwhile, their coat can be a golden color, sand, orange, rust or brown. It is said that some Bengal cats have fur that shimmers in the sunlight. Their eyes can be either gold or green.",
           br(),
           br(), 
           "The Bengal can live up to 15 years if well taken care of. They can be about 45 cm in length and weigh around 5.5 kilos but some can weigh up to 9 kilos. They are not hypoallergenic cats. They are moderately talkative and go well with pets and little kids. The Bengal cat is on the more expensive end of cat breeds, ranging from CHF1'500 to CHF3'000",
@@ -339,10 +337,43 @@ server <- function(input, output) {
           "If you are interested in learning more about the Bengal cat, please consult the following site : ",
           a("The Cat Fanciers' Association", href = "https://cfa.org/bengal/"))
         
-      } else if (input$catbreeds == "Birman"){
+      } else if (input$catbreeds == "Bombay"){
         
-        p("")
+        p(style = "text-align : justify;",
+          "The Bombay cat looks like a miniature panther. It has a short black coat of fur and big golden eyes. The Bombay came to be when someone crossed an American Shorthair with a Burmese cat. Apparently the name comes from the breeder who 'created' the Bombay cat. The name is a reference to the famous black panther of India which was the inspiration for the Bombay cat.",
+        br(), 
+        br(),
+        "The Bombay cat can live up to 20 years of age. As for length and weight, the Bombay cat can weigh up to around 7 kilos and be around 50 cm in length. Bombay cats are famously needy cats, they need a lot of attention and playtime. They are also very social and friendly cats so they do well with little kids and pets. However, for those who work a lot, the Bombay cat is not a good fit as they'll get depressed if left alone for long periods of time. They don't shed much and aren't particularily noisy. They are another breed of cat that aren't hypoallergenic. The price for a Bombay cat can range from CHF400 to CHF650.",
+        br(),
+        br(),
+        h4("Health Issues : "),
+        "While the Bombay is generally a healthy cat, they are still prone to a few conditions.",
+        br(),
+        br(),
+        "Hypertrophic cardiomyopathy which is the thickening of the heart walls",
+        br(),
+        br(),
+        "Excessive eye tearing or drainage",
+        br(),
+        br(),
+        "Respiratory issues and congestion, this is common with breeds with smaller noses",
+        br(),
+        br(),
+        "If you're interested in learning more about the Bombay cat, please check out the following site : ",
+        a("The Cat Fanciers' Association", href = "https://cfa.org/bombay/"))
         
+      } else if (input$catbreeds == "British Shorthair"){
+        p(style = "text-align : justify;",
+         "The British Shorthair is best known for their round heads, round cheeks, large round eyes and firm chins. The British Shorthair has a long history, being present during the first cat show in England in 1871. The name is because the cat was developed naturally without human intervention and is likely Britain's most iconic cat breed. It is a breed famous for being one of the 'blue' cats. However, white, black, orange, tabby, calico, tortoiseshell, silver and many more colors are also present but 'blue' is still by far the most popular. Its fur coat is short and very dense, a striking feature in British Shorthairs. Its eyes can be blue, gold, green, hazel and many others. It is one of the few cats that can have different colors for each eye.",
+         br(),
+         br(),
+         "The average British Shorthair can live for between 12 to 16 years depending on quality of care from the owner. Its length can range from 55 to 65 cm and it can weigh up to 7.7 kilograms with males being larger than females. They aren't hypoallergenic, they're calm, quiet family cats with very little problems. The average British Shorthair can cost you anywhere between CHF400 to CHF3'500, a very wide range.",
+         h4("Health Issues : "),
+         "The British Shorthair is remarkably not prone to any genetic illnesses they are still prone to some standard issues in particular heart problems",
+         br(),
+         br(),
+         "If you're interested in learning more about the British Shorthair, please check out the following site : ",
+         a("The Cat Fanciers' Association", href = "https://cfa.org/british-shorthair"))
       }
       
       
