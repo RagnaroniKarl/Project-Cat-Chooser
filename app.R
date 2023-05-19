@@ -147,7 +147,8 @@ server <- function(input, output) {
      img(height = 200, width = 300, src = "sphynx.jpg")
    } else {
    }
-  
+  }
+
   
   introduction <- ({
     "This is the introduction page. Thank you for using our website!"
