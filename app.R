@@ -115,14 +115,58 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      h4("Meet the Our Ailurophile Team:"),
                                      br(),
                                      p(""),
-                                     
+                                     div(class = "container",
+                                         div(class = "row",
+                                             
+                                             # Colonne 1
+                                             div(class = "col-md-4",
+                                                 h3("Membre 1"),
+                                                 img(src = "nelson-chikuru.jpg", class = "img-responsive"),
+                                                 p("Description du membre 1"),
+                                                 h4("Rôle occupé :"),
+                                                 p("Rôle membre 1"),
+                                                 h4("Description du rôle :"),
+                                                 p("Description du rôle membre 1"),
+                                                 h4("Contacts :"),
+                                                 p("Email : membre1@example.com"),
+                                                 p("Téléphone : +1 123 456 789")
+                                             ),
+                                             
+                                             # Colonne 2
+                                             div(class = "col-md-4",
+                                                 h3("Membre 2"),
+                                                 img(src = "karl-mayers.jpeg", class = "img-responsive"),
+                                                 p("Description du membre 2"),
+                                                 h4("Rôle occupé :"),
+                                                 p("Rôle membre 2"),
+                                                 h4("Description du rôle :"),
+                                                 p("Description du rôle membre 2"),
+                                                 h4("Contacts :"),
+                                                 p("Email : membre2@example.com"),
+                                                 p("Téléphone : +1 987 654 321")
+                                             ),
+                                             
+                                             # Colonne 3
+                                             div(class = "col-md-4",
+                                                 h3("Membre 3"),
+                                                 img(src = "hugo-hugo.jpeg", class = "img-responsive"),
+                                                 p("Description du membre 3"),
+                                                 h4("Rôle occupé :"),
+                                                 p("Rôle membre 3"),
+                                                 h4("Description du rôle :"),
+                                                 p("Description du rôle membre 3"),
+                                                 h4("Contacts :"),
+                                                 p("Email : membre3@example.com"),
+                                                 p("Téléphone : +1 555 123 456")
+                                             )
+                                         )
+                                     )
                             )
                 )
 )
-                
-                
-                
-                
+                                                       
+                                     
+               
                 # )
                 #)
 
