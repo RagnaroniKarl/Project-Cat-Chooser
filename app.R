@@ -117,7 +117,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                              # Colonne 1
                                              div(class = "col-md-4",
                                                  h3("Nelson Chikuru"),
-                                                 img(src = "nelson-chikuru.jpg", class = "img-responsive"),
+                                                 img(src = "nelson-chikuru Petite.jpeg", class = "img-responsive"),
                                                  h4("Marketing Manager:"),
                                                  p("Nelson develops and implements effective marketing strategies, manages campaigns, conducts market research, and oversees brand management. Nelson collaborates with internal teams and external partners for seamless coordination. It requires market knowledge, project management skills, and creative thinking."),
                                                  h4("Contacts :"),
@@ -128,7 +128,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                              # Colonne 2
                                              div(class = "col-md-4",
                                                  h3("Karl Myers"),
-                                                 img(src = "karl-myers.jpeg", class = "img-responsive"),
+                                                 img(src = "karl-mayers Petite.jpeg", class = "img-responsive"),
                                                  h4("Operation Manager :"),
                                                  p("Karl oversees and manages day-to-day operations, ensuring efficient processes, resource allocation, and timely execution of projects. He is responsible for optimizing productivity, streamlining workflows, and achieving operational objectives. It demand strong organizational, problem-solving, and leadership skills."),
                                                  h4("Contacts :"),
@@ -139,7 +139,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                              # Colonne 3
                                              div(class = "col-md-4",
                                                  h3("Hugo Francisco"),
-                                                 img(src = "hugo-hugo.jpeg", class = "img-responsive"),
+                                                 img(src = "hugo-francisco Petite.jpeg", class = "img-responsive"),
                                                  h4("Web Architect :"),
                                                  p("Hugo designs and develops high-level architecture for web applications, ensuring scalability, performance, and security. He collaborates with cross-functional teams to define technical requirements and implement best practices. It requires expertise in web technologies, strong problem-solving skills, and a deep understanding of software architecture principles."),
                                                  h4("Contacts :"),
@@ -151,11 +151,11 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             )
                 )
 )
-                                                       
-                                     
-               
-                # )
-                #)
+
+
+
+# )
+#)
 
 
 #outputs
@@ -245,11 +245,11 @@ server <- function(input, output) {
   
   
   #Information about the various cat breeds
-    output$catbreedinfo <- renderUI({
-      if(input$catbreeds == "Abyssinian"){
-        
-        
-        p(style = "text-align : justify;",
+  output$catbreedinfo <- renderUI({
+    if(input$catbreeds == "Abyssinian"){
+      
+      
+      p(style = "text-align : justify;",
         "The Abyssinian cat is believed to be the cat breed once owned by the kings of Ancient Egypt : the Pharaohs, however some people believe they are the result of Victorian English catbreeders where the name comes from, they were imported from Abyssinia, today's Ethiopia. The Abyssinian is a short haired cat that doesn't shed. It's color can best be described as a reddish-brown or 'ruddy' base with black ticking, a trait of tabby cats. It has either green or gold/sulfrur eyes", 
         br(), 
         br(), 
@@ -274,115 +274,115 @@ server <- function(input, output) {
         br(), 
         "If you want to learn more about the Abyssinian cat, please visit the following site : ", 
         a("The Cat Fanciers' Association : Abyssinian", href = "https://cfa.org/abyssinian/") )
-        
-      } else if (input$catbreeds == "American Bobtail"){
-        
-        p(style = "text-align : justify;", 
+      
+    } else if (input$catbreeds == "American Bobtail"){
+      
+      p(style = "text-align : justify;", 
         "The American Bobbtail cat is immediately recognizable by its short tai, generally between one third to one half the size of a regular cat tail, and lynx-like features. In terms of their colors, they have all the standard cat colors like grey, black, orange and white however breeders prefer to give them the colors that make them look like their wild counterparts. It is believed that they came into existance in the late 1960s because of efforts by breeders. When it goes to their eye color, they can have all the standard colors such as green, blue, gold/sulfur and copper.", 
-          br(), 
-          br(), 
-          "The American Bobtail cat has an expected lifespan of 13 to 18 years. They can be up to 76 cm in length, male American Bobtail cats will be larger than their female counterparts. They can weigh up to 7.25 kilograms. They are not hypoallergenic cats. American Bobtails are prone to moderate shedding and can be moderately talkative. The average price for an American Bobtail cat is between CHF600 and CHF1200.", 
-          br(), 
-          br(), 
-          h4("Health Issues : "),
-          "Like most cats, they are relatively healthy but have some common health conditions associated with the breed :", 
-          br(), 
-          br(), 
-          "Polycystic kidney disease (PKD) : A condition characterized by the development of cystst on one or both kidneys.", 
-          br(), 
-          br(), 
-          "Hypertrophic cardiomyopathy : The thickening of the heart muscle. ", 
-          br(), 
-          br(), 
-          "If you have worries about your cat's health, please consult our vetenarian page to find a practician to help you!", 
-          br(), 
-          br(), 
-          "If you want to learn more about the American Bobtail cat, please visit the following site : ", 
-          a("The Cat Fanciers' Association : American Bobtail Cat", href = "https://cfa.org/american-bobtail/"))
-        
-      } else if (input$catbreeds == "American Shorthair"){
-        
-        p(style = "text-align : justify;",
+        br(), 
+        br(), 
+        "The American Bobtail cat has an expected lifespan of 13 to 18 years. They can be up to 76 cm in length, male American Bobtail cats will be larger than their female counterparts. They can weigh up to 7.25 kilograms. They are not hypoallergenic cats. American Bobtails are prone to moderate shedding and can be moderately talkative. The average price for an American Bobtail cat is between CHF600 and CHF1200.", 
+        br(), 
+        br(), 
+        h4("Health Issues : "),
+        "Like most cats, they are relatively healthy but have some common health conditions associated with the breed :", 
+        br(), 
+        br(), 
+        "Polycystic kidney disease (PKD) : A condition characterized by the development of cystst on one or both kidneys.", 
+        br(), 
+        br(), 
+        "Hypertrophic cardiomyopathy : The thickening of the heart muscle. ", 
+        br(), 
+        br(), 
+        "If you have worries about your cat's health, please consult our vetenarian page to find a practician to help you!", 
+        br(), 
+        br(), 
+        "If you want to learn more about the American Bobtail cat, please visit the following site : ", 
+        a("The Cat Fanciers' Association : American Bobtail Cat", href = "https://cfa.org/american-bobtail/"))
+      
+    } else if (input$catbreeds == "American Shorthair"){
+      
+      p(style = "text-align : justify;",
         "The American Shorthair is a cat that can trace its origins to the European settlers that moved to North America. They were valued on the ships for that rodent hunting abilities. Some were even belived to be present on the famous, to Americans of course, Mayflower ship. For this and many other reasons, they are one of the most popular cat breeds on the North American continent. For coloring, they can be white, silver (light grey), black, cream, brown and red. These colorings are found under mostly the tabby cat pattern (see image), however calico, tortoiseshell, bi-color and solid do exist. Their eyes can be gold, blue, copper or green.", 
-          br(), 
-          br(), 
-          "The American Shorthair can live up to 15 to 20 years if well taken care of. They can be between 30 and 38 cm in legth and can weigh between 4.5 and 6.8 kilograms. American Shorthair cats are not hypoallergenic cats so people with allergies should go well with them. They are moderately prone to shedding and vocalizing and they are very family friendly cats being good with little kids and other pets. When it comes to price, the American Shorthair is more afforable than many other cats on this site, ranging from CHF500 to CHF800.", 
-          br(), 
-          br(), 
-          h4("Health Issues : "),
-          "The American Shorthair cat is especially lucky in terms of its health, unlike many other breeds, they are not prone to any breed specific issues which makes them lower maintenance cats.",
-          br(),
-          br(), 
-          "If you want to learn more about the American Shorthair cat, please visit the following site: ",
-          a("The Cat Fanciers' Association : American Shorthair Cat", href = "https://cfa.org/american-shorthair/"))
-        
-      } else if (input$catbreeds == "Balinese"){
-        
-        p(style = "text-align : justify;",
+        br(), 
+        br(), 
+        "The American Shorthair can live up to 15 to 20 years if well taken care of. They can be between 30 and 38 cm in legth and can weigh between 4.5 and 6.8 kilograms. American Shorthair cats are not hypoallergenic cats so people with allergies should go well with them. They are moderately prone to shedding and vocalizing and they are very family friendly cats being good with little kids and other pets. When it comes to price, the American Shorthair is more afforable than many other cats on this site, ranging from CHF500 to CHF800.", 
+        br(), 
+        br(), 
+        h4("Health Issues : "),
+        "The American Shorthair cat is especially lucky in terms of its health, unlike many other breeds, they are not prone to any breed specific issues which makes them lower maintenance cats.",
+        br(),
+        br(), 
+        "If you want to learn more about the American Shorthair cat, please visit the following site: ",
+        a("The Cat Fanciers' Association : American Shorthair Cat", href = "https://cfa.org/american-shorthair/"))
+      
+    } else if (input$catbreeds == "Balinese"){
+      
+      p(style = "text-align : justify;",
         "The Balinese looks like a long haired Siamese cat due to a genetic mutation that caused some Siamese to grow longer fur. For their colors, they have the distinctly Siamese look of the white or cream colored body with darker, usually dark brown or grey brown, accents on the face, ears, legs and tail. As for their eyes, they have deep blue eyes that all Siamese cats possess.",
-          br(),
-          br(),
-          "The Balinese has a life expectancy of 12 to 20 years depending on the care of the owner. They can be about 45 cm long in length. When it goes to weight, they can weigh between 3.6 and about 5 kilos. Being related to the Siamese family, the Balinese is a rather noisy cat and they will shed a lot of fur. They are considered hypoallergenic cats. The average Balinese can cost you between CHF400 to CHF1'500.",
-          br(),
-          br(),
-          h4("Health Issues : "),
-          "The Balinese, being related to the Siamese is prone to many of the same health conditions as the Siamese. Such health conditions are :",
-          br(),
-          br(), 
-          "Eye problems : Progressive Retinal Atrophy is one of the most common health condition found in Balinese cats. They are also prone to being cross-eyed.",
-          br(),
-          br(),
-          "Liver Amyloidosis (This is when the amyloid proteins are deposited in the liver and reduces liver function and can lead to liver failure",
-          br(),
-          br(),
-          "Respiratory Issues",
-          br(),
-          br(),
-          "Neurological issues : They are prone to Hyperesthesia syndrome which makes them groom themselves excessively and Nystagmus which results in rapid eye movement.",
-          br(),
-          br(),
-          "Heart problems",
-          br(),
-          br(),
-          "If you have worries about your cat's health, please consult our vetenarian page to find a practician to help you!",
-          br(),
-          br(), 
-          "If you want to learn more about the Balinese, please consult the following site : ",
-          a("The Cat Fanciers' Association : Balinese Cat", href = "https://cfa.org/balinese/"))
-        
-        
-      } else if (input$catbreeds == "Bengal"){
-        
-        p(style = "text-align : justify;",
-          "The Bengal cat is a relatively new cat breed, being created when a breeder crossed a Domestic Shorthair with an Asian Leopard cat in the early 1960s. Thanks to its relation to the Asian Leopard cat, the Bengal has inherited many features of that cat. Such features are their leopard-like spots on their fur. These spots can come in many colors including rust, chocolate brown or black. Meanwhile, their coat can be a golden color, sand, orange, rust or brown. It is said that some Bengal cats have fur that shimmers in the sunlight. Their eyes can be either gold or green.",
-          br(),
-          br(), 
-          "The Bengal can live up to 15 years if well taken care of. They can be about 45 cm in length and weigh around 5.5 kilos but some can weigh up to 9 kilos. They are not hypoallergenic cats. They are moderately talkative and go well with pets and little kids. The Bengal cat is on the more expensive end of cat breeds, ranging from CHF1'500 to CHF3'000",
-          br(),
-          br(),
-          h4("Health Issues : "),
-          "The Bengal is prone to a few health conditions :",
-          br(),
-          br(), 
-          "Autosomal recessive disorder : this causes early blindness in young cats",
-          br(),
-          br(),
-          "Entropion : the rolling in of the eyelids",
-          br(),
-          br(),
-          "Feline infectious peritonitis, a deadly disease that results from infection by the coronavirus",
-          br(),
-          br(),
-          "If you have worried about your cat's health and how to take care of them, please consult our vetenarian page to find a practician to help you!",
-          br(),
-          br(),
-          "If you are interested in learning more about the Bengal cat, please consult the following site : ",
-          a("The Cat Fanciers' Association : Bengal Cat", href = "https://cfa.org/bengal/"))
-        
-      } else if (input$catbreeds == "Bombay"){
-        
-        p(style = "text-align : justify;",
-          "The Bombay cat looks like a miniature panther. It has a short black coat of fur and big golden eyes. The Bombay came to be when someone crossed an American Shorthair with a Burmese cat. Apparently the name comes from the breeder who 'created' the Bombay cat. The name is a reference to the famous black panther of India which was the inspiration for the Bombay cat.",
+        br(),
+        br(),
+        "The Balinese has a life expectancy of 12 to 20 years depending on the care of the owner. They can be about 45 cm long in length. When it goes to weight, they can weigh between 3.6 and about 5 kilos. Being related to the Siamese family, the Balinese is a rather noisy cat and they will shed a lot of fur. They are considered hypoallergenic cats. The average Balinese can cost you between CHF400 to CHF1'500.",
+        br(),
+        br(),
+        h4("Health Issues : "),
+        "The Balinese, being related to the Siamese is prone to many of the same health conditions as the Siamese. Such health conditions are :",
+        br(),
+        br(), 
+        "Eye problems : Progressive Retinal Atrophy is one of the most common health condition found in Balinese cats. They are also prone to being cross-eyed.",
+        br(),
+        br(),
+        "Liver Amyloidosis (This is when the amyloid proteins are deposited in the liver and reduces liver function and can lead to liver failure",
+        br(),
+        br(),
+        "Respiratory Issues",
+        br(),
+        br(),
+        "Neurological issues : They are prone to Hyperesthesia syndrome which makes them groom themselves excessively and Nystagmus which results in rapid eye movement.",
+        br(),
+        br(),
+        "Heart problems",
+        br(),
+        br(),
+        "If you have worries about your cat's health, please consult our vetenarian page to find a practician to help you!",
+        br(),
+        br(), 
+        "If you want to learn more about the Balinese, please consult the following site : ",
+        a("The Cat Fanciers' Association : Balinese Cat", href = "https://cfa.org/balinese/"))
+      
+      
+    } else if (input$catbreeds == "Bengal"){
+      
+      p(style = "text-align : justify;",
+        "The Bengal cat is a relatively new cat breed, being created when a breeder crossed a Domestic Shorthair with an Asian Leopard cat in the early 1960s. Thanks to its relation to the Asian Leopard cat, the Bengal has inherited many features of that cat. Such features are their leopard-like spots on their fur. These spots can come in many colors including rust, chocolate brown or black. Meanwhile, their coat can be a golden color, sand, orange, rust or brown. It is said that some Bengal cats have fur that shimmers in the sunlight. Their eyes can be either gold or green.",
+        br(),
+        br(), 
+        "The Bengal can live up to 15 years if well taken care of. They can be about 45 cm in length and weigh around 5.5 kilos but some can weigh up to 9 kilos. They are not hypoallergenic cats. They are moderately talkative and go well with pets and little kids. The Bengal cat is on the more expensive end of cat breeds, ranging from CHF1'500 to CHF3'000",
+        br(),
+        br(),
+        h4("Health Issues : "),
+        "The Bengal is prone to a few health conditions :",
+        br(),
+        br(), 
+        "Autosomal recessive disorder : this causes early blindness in young cats",
+        br(),
+        br(),
+        "Entropion : the rolling in of the eyelids",
+        br(),
+        br(),
+        "Feline infectious peritonitis, a deadly disease that results from infection by the coronavirus",
+        br(),
+        br(),
+        "If you have worried about your cat's health and how to take care of them, please consult our vetenarian page to find a practician to help you!",
+        br(),
+        br(),
+        "If you are interested in learning more about the Bengal cat, please consult the following site : ",
+        a("The Cat Fanciers' Association : Bengal Cat", href = "https://cfa.org/bengal/"))
+      
+    } else if (input$catbreeds == "Bombay"){
+      
+      p(style = "text-align : justify;",
+        "The Bombay cat looks like a miniature panther. It has a short black coat of fur and big golden eyes. The Bombay came to be when someone crossed an American Shorthair with a Burmese cat. Apparently the name comes from the breeder who 'created' the Bombay cat. The name is a reference to the famous black panther of India which was the inspiration for the Bombay cat.",
         br(), 
         br(),
         "The Bombay cat can live up to 20 years of age. As for length and weight, the Bombay cat can weigh up to around 7 kilos and be around 50 cm in length. Bombay cats are famously needy cats, they need a lot of attention and playtime. They are also very social and friendly cats so they do well with little kids and pets. However, for those who work a lot, the Bombay cat is not a good fit as they'll get depressed if left alone for long periods of time. They don't shed much and aren't particularily noisy. They are another breed of cat that aren't hypoallergenic. The price for a Bombay cat can range from CHF400 to CHF650.",
@@ -403,98 +403,98 @@ server <- function(input, output) {
         br(),
         "If you're interested in learning more about the Bombay cat, please check out the following site : ",
         a("The Cat Fanciers' Association : Bombay Cat", href = "https://cfa.org/bombay/"))
-        
-      } else if (input$catbreeds == "British Shorthair"){
-        p(style = "text-align : justify;",
-         "The British Shorthair is best known for their round heads, round cheeks, large round eyes and firm chins. The British Shorthair has a long history, being present during the first cat show in England in 1871. The name is because the cat was developed naturally without human intervention and is likely Britain's most iconic cat breed. It is a breed famous for being one of the 'blue' cats. However, white, black, orange, tabby, calico, tortoiseshell, silver and many more colors are also present but 'blue' is still by far the most popular. Its fur coat is short and very dense, a striking feature in British Shorthairs. Its eyes can be blue, gold, green, hazel and many others. It is one of the few cats that can have different colors for each eye.",
-         br(),
-         br(),
-         "The average British Shorthair can live for between 12 to 16 years depending on quality of care from the owner. Its length can range from 55 to 65 cm and it can weigh up to 7.7 kilograms with males being larger than females. They aren't hypoallergenic, they're calm, quiet family cats with very little problems. The average British Shorthair can cost you anywhere between CHF400 to CHF3'500, a very wide range.",
-         h4("Health Issues : "),
-         "The British Shorthair is remarkably not prone to any genetic illnesses they are still prone to some standard issues in particular heart problems",
-         br(),
-         br(),
-         "If you're interested in learning more about the British Shorthair, please check out the following site : ",
-         a("The Cat Fanciers' Association : British Shorthair", href = "https://cfa.org/british-shorthair/"))
-      } else if (input$catbreeds == "Devon Rex"){
-        p(style = "text-align : justify;",
-          "The Devon Rex is often compared to an alien. Its large  ears, giant eyes and rather angular face. It has a somewhat unique coat of fur that can be described as 'wavy'. In terms of fur colors and eye colors, it can have any of the standard cat colors. The breed was discovered in Devonshire, England in 1960 when a woman found a bizarre looking kitten. She thought the kitten was related to the Cornish Rex which is why the breed is called the Devon Rex.",
-          br(),
-          br(),
-          "The average Devon Rex can live for between 9 to 15 years depending on quality of care from the owner. Its length can range up to about 45 cm and it can between 2.7 to 4 kilograms, making them a rather small breed of cat. They are a hypoallergenic breed of cat. The Devon Rex is known to be very active, social and a friendly temperament.The average Devon Rex will cost you between CHF350 to CHF2'500.",
-          h4("Health Issues : "),
-          "The Devon Rex is unfortunately prone to a few health conditions :", 
-          br(),
-          br(),
-          "Patellar luxation : A luxating patella happens when a knee cap is dislocated. Devon Rexes are believed to be genetically predisposed to the condition.",
-          br(),
-          br(),
-          "Heart Problems : the Devon Rex is predisposed to hypertrophic cardiomyopathy, a type of heart condition.",
-          br(),
-          br(),
-          "Devon Rex Myopathy : this is a muscle weakness condition that usually affects the head and the neck. Symptoms will generally appear between three weeks and six months of age. This is a hereditary and recessive gene for Devon Rexes.",
-          "If you're interested in learning more about the Devon Rex, please check out the following site : ",
-          a("The Cat Fanciers' Association : Devon Rex", href = "https://cfa.org/devon-rex/"))
-      } else if (input$catbreeds == "Exotic Shorthair"){
-        p(style = "text-align : justify;",
-          "The Exotic Shorthair cat looks a lot like the Persian cat however it does not have the famous long fur of the Persian cat. This is why joked as the 'lazy person's Persian'. When it goes to colors, the Exotic Shorthair can have black, golden, silver, white, bicolor and Himalayan fur colors and its eyes can be gold, green or blue. The Exotic Shorthair came into being when breeders mixed various other breeds like the Persian, American Shorthair and other breeds to create the Exotic Shorthair in the 1950s.", 
-          br(),
-          br(),
-          "The average Exotic Shorthair can live up to around 15 years of age depending on quality of care from the owner. The Exotic Shorthair can be up to 76 cm long and weigh up to around close to 7 kilograms. Like many cats on this list, the Exotic Shorthair isn't hypoallergenic. The Exotic Shorthair is comparatively low energy compared to other felines. This makes them good starter cats for busy people, first-time cat owners and older people. The average Exotic Shorthair can go for around CHF1'500 to CHF2'000 depending on the seller and pedigree.",
-          h4("Health Issues : "),
-          "Due to inbreeding, the Exotic Shorthair may have a few health conditions such as :",
-          br(),
-          br(),
-          "Polycstic Kidney Disease : The kidneys will be enlarged and will not function properly. Cysts are typically seen in affected cats by their first year alive. This can lead to kidney failure.",
-          br(), 
-          br(),
-          "Breathing problems : Due to their flattened faces, Exotic Shorthairs can suffer from breathing problems, espeically in warm, humid climates. An easy fix for this is to have air-conditioning.",
-          br(),
-          br(),
-          "If you're interested in learning more about the Exotic Shorthair, please check out the following site : ",
-          a("The Cat Fanciers' Association : Exotic Shorthair Cat", href = "https://cfa.org/exotic-shorthair/"))
-      } else if (input$catbreeds == "Himalayan"){
-        p(style = "text-align : justify;",
-          "Created when breeders crossed Persian and Siamese cats, the Himalayan is best described as a long haired Siamese. They are actually a relatively young breed of cat, being less than 100 years. They are distinguishable by their white to cream coats and darker extremities like their faces, legs, ears and tail. These extremities can be chocolate, seal or lilac in coloring. As for their eyes, they have the iconic blue eyes of the Siamese cat.", 
-          br(),
-          br(),
-          "A well taken care of Himalayan can live up to 15 years old. The Himalayan can weigh from 3 kilos all the way up to 5 kilograms and have be anywhere between 30 to 40 centimeters in length. They aren't hypoallergenic however their long fur makes them high-maintenance cats as they need daily brushing and care. They generally get along with little kids and pets. If you want to buy a Himalayan cat, it will cost you anywhere between CHF500 to CHF1'000.",
-          h4("Health Issues : "),
-          "The Himalayan cat is prone to many of the same health conditions as Persians and other Persian derived breeds.",
-          br(),
-          br(),
-          "Polycstic Kidney Disease : The kidneys will be enlarged and will not function properly. Cysts are typically seen in affected cats by their first year alive. This can lead to kidney failure.",
-          br(), 
-          br(),
-          "Respiratory Issues due to their flattened faces, they can have trouble breathing, especially in warm, humid climates. Air-conditioning will make it easier for them.", 
-          br(),
-          br(),
-          "Feline Asthma : This is a serious illness that can be fatal. If you find your cat frequently coughing, having asthma attacks or other issues. Please consult a veterinarian.",
-          br(),
-          br(),
-          "Progressive Retinal Atrophy : This is an inherited eye disorder that can lead to blindness in your cat",
-          br(),
-          br(),
-          "If you're interested in learning more about the Himalayan Cat, please check out the following site : ",
-          a("The Cat Fanciers' Association : Himalayan Cat", href = "https://cfa.org/persian/himalayan-persian-article-1999/"))
-      } else if (input$catbreeds == "Maine Coon"){
-        p(style = "text-align : justify;",
-          "The Maine Coon is the biggest cat breed of them all. Having existed in the United States since the 1800s, they were found throughout the North Eastern US and were especially popular in the state of Maine which is where its name derives from. Its fur coat is long and shaggy and they have ears that ressemble those of a bobcat. They can be found in almost every color except Siamese looking colors like lavender and Himalayan. They can have all the standard cat eye colors such as gold, green, blue or even odd-eyed.", 
-          br(),
-          br(),
-          "The life expectancy of a Maine Coon is about 12 to 15 years old. They are the biggest cat breed in both weight and length. Being around 4 kilos on the low end and getting up to 9 kilos or more for some males. They are also very long, measuring from 45 to 76 cm long. Despite their imposing look, they are considered 'Gentle Giants' because of their good, gentle nature. They are very loving. They are not hypoallergenic. They are also prone to moderate shedding and can be quite loud. A Maine Coon will cost you anywhere between CHF400 to CHF6'000.",
-          h4("Health Issues : "),
-          "The only condition that Maine Coons are really prone to is spinal muscular atrophy, a disease that causes degeneration of the spinal cord and atrophy of the hind legs.",
-          br(),
-          br(),
-          "If you're interested in learning more about the Maine Coon, please check out the following site : ",
-          a("The Cat Fanciers' Association : Maine Coon", href = "https://cfa.org/maine-coon-cat/"))
-      }
+      
+    } else if (input$catbreeds == "British Shorthair"){
+      p(style = "text-align : justify;",
+        "The British Shorthair is best known for their round heads, round cheeks, large round eyes and firm chins. The British Shorthair has a long history, being present during the first cat show in England in 1871. The name is because the cat was developed naturally without human intervention and is likely Britain's most iconic cat breed. It is a breed famous for being one of the 'blue' cats. However, white, black, orange, tabby, calico, tortoiseshell, silver and many more colors are also present but 'blue' is still by far the most popular. Its fur coat is short and very dense, a striking feature in British Shorthairs. Its eyes can be blue, gold, green, hazel and many others. It is one of the few cats that can have different colors for each eye.",
+        br(),
+        br(),
+        "The average British Shorthair can live for between 12 to 16 years depending on quality of care from the owner. Its length can range from 55 to 65 cm and it can weigh up to 7.7 kilograms with males being larger than females. They aren't hypoallergenic, they're calm, quiet family cats with very little problems. The average British Shorthair can cost you anywhere between CHF400 to CHF3'500, a very wide range.",
+        h4("Health Issues : "),
+        "The British Shorthair is remarkably not prone to any genetic illnesses they are still prone to some standard issues in particular heart problems",
+        br(),
+        br(),
+        "If you're interested in learning more about the British Shorthair, please check out the following site : ",
+        a("The Cat Fanciers' Association : British Shorthair", href = "https://cfa.org/british-shorthair/"))
+    } else if (input$catbreeds == "Devon Rex"){
+      p(style = "text-align : justify;",
+        "The Devon Rex is often compared to an alien. Its large  ears, giant eyes and rather angular face. It has a somewhat unique coat of fur that can be described as 'wavy'. In terms of fur colors and eye colors, it can have any of the standard cat colors. The breed was discovered in Devonshire, England in 1960 when a woman found a bizarre looking kitten. She thought the kitten was related to the Cornish Rex which is why the breed is called the Devon Rex.",
+        br(),
+        br(),
+        "The average Devon Rex can live for between 9 to 15 years depending on quality of care from the owner. Its length can range up to about 45 cm and it can between 2.7 to 4 kilograms, making them a rather small breed of cat. They are a hypoallergenic breed of cat. The Devon Rex is known to be very active, social and a friendly temperament.The average Devon Rex will cost you between CHF350 to CHF2'500.",
+        h4("Health Issues : "),
+        "The Devon Rex is unfortunately prone to a few health conditions :", 
+        br(),
+        br(),
+        "Patellar luxation : A luxating patella happens when a knee cap is dislocated. Devon Rexes are believed to be genetically predisposed to the condition.",
+        br(),
+        br(),
+        "Heart Problems : the Devon Rex is predisposed to hypertrophic cardiomyopathy, a type of heart condition.",
+        br(),
+        br(),
+        "Devon Rex Myopathy : this is a muscle weakness condition that usually affects the head and the neck. Symptoms will generally appear between three weeks and six months of age. This is a hereditary and recessive gene for Devon Rexes.",
+        "If you're interested in learning more about the Devon Rex, please check out the following site : ",
+        a("The Cat Fanciers' Association : Devon Rex", href = "https://cfa.org/devon-rex/"))
+    } else if (input$catbreeds == "Exotic Shorthair"){
+      p(style = "text-align : justify;",
+        "The Exotic Shorthair cat looks a lot like the Persian cat however it does not have the famous long fur of the Persian cat. This is why joked as the 'lazy person's Persian'. When it goes to colors, the Exotic Shorthair can have black, golden, silver, white, bicolor and Himalayan fur colors and its eyes can be gold, green or blue. The Exotic Shorthair came into being when breeders mixed various other breeds like the Persian, American Shorthair and other breeds to create the Exotic Shorthair in the 1950s.", 
+        br(),
+        br(),
+        "The average Exotic Shorthair can live up to around 15 years of age depending on quality of care from the owner. The Exotic Shorthair can be up to 76 cm long and weigh up to around close to 7 kilograms. Like many cats on this list, the Exotic Shorthair isn't hypoallergenic. The Exotic Shorthair is comparatively low energy compared to other felines. This makes them good starter cats for busy people, first-time cat owners and older people. The average Exotic Shorthair can go for around CHF1'500 to CHF2'000 depending on the seller and pedigree.",
+        h4("Health Issues : "),
+        "Due to inbreeding, the Exotic Shorthair may have a few health conditions such as :",
+        br(),
+        br(),
+        "Polycstic Kidney Disease : The kidneys will be enlarged and will not function properly. Cysts are typically seen in affected cats by their first year alive. This can lead to kidney failure.",
+        br(), 
+        br(),
+        "Breathing problems : Due to their flattened faces, Exotic Shorthairs can suffer from breathing problems, espeically in warm, humid climates. An easy fix for this is to have air-conditioning.",
+        br(),
+        br(),
+        "If you're interested in learning more about the Exotic Shorthair, please check out the following site : ",
+        a("The Cat Fanciers' Association : Exotic Shorthair Cat", href = "https://cfa.org/exotic-shorthair/"))
+    } else if (input$catbreeds == "Himalayan"){
+      p(style = "text-align : justify;",
+        "Created when breeders crossed Persian and Siamese cats, the Himalayan is best described as a long haired Siamese. They are actually a relatively young breed of cat, being less than 100 years. They are distinguishable by their white to cream coats and darker extremities like their faces, legs, ears and tail. These extremities can be chocolate, seal or lilac in coloring. As for their eyes, they have the iconic blue eyes of the Siamese cat.", 
+        br(),
+        br(),
+        "A well taken care of Himalayan can live up to 15 years old. The Himalayan can weigh from 3 kilos all the way up to 5 kilograms and have be anywhere between 30 to 40 centimeters in length. They aren't hypoallergenic however their long fur makes them high-maintenance cats as they need daily brushing and care. They generally get along with little kids and pets. If you want to buy a Himalayan cat, it will cost you anywhere between CHF500 to CHF1'000.",
+        h4("Health Issues : "),
+        "The Himalayan cat is prone to many of the same health conditions as Persians and other Persian derived breeds.",
+        br(),
+        br(),
+        "Polycstic Kidney Disease : The kidneys will be enlarged and will not function properly. Cysts are typically seen in affected cats by their first year alive. This can lead to kidney failure.",
+        br(), 
+        br(),
+        "Respiratory Issues due to their flattened faces, they can have trouble breathing, especially in warm, humid climates. Air-conditioning will make it easier for them.", 
+        br(),
+        br(),
+        "Feline Asthma : This is a serious illness that can be fatal. If you find your cat frequently coughing, having asthma attacks or other issues. Please consult a veterinarian.",
+        br(),
+        br(),
+        "Progressive Retinal Atrophy : This is an inherited eye disorder that can lead to blindness in your cat",
+        br(),
+        br(),
+        "If you're interested in learning more about the Himalayan Cat, please check out the following site : ",
+        a("The Cat Fanciers' Association : Himalayan Cat", href = "https://cfa.org/persian/himalayan-persian-article-1999/"))
+    } else if (input$catbreeds == "Maine Coon"){
+      p(style = "text-align : justify;",
+        "The Maine Coon is the biggest cat breed of them all. Having existed in the United States since the 1800s, they were found throughout the North Eastern US and were especially popular in the state of Maine which is where its name derives from. Its fur coat is long and shaggy and they have ears that ressemble those of a bobcat. They can be found in almost every color except Siamese looking colors like lavender and Himalayan. They can have all the standard cat eye colors such as gold, green, blue or even odd-eyed.", 
+        br(),
+        br(),
+        "The life expectancy of a Maine Coon is about 12 to 15 years old. They are the biggest cat breed in both weight and length. Being around 4 kilos on the low end and getting up to 9 kilos or more for some males. They are also very long, measuring from 45 to 76 cm long. Despite their imposing look, they are considered 'Gentle Giants' because of their good, gentle nature. They are very loving. They are not hypoallergenic. They are also prone to moderate shedding and can be quite loud. A Maine Coon will cost you anywhere between CHF400 to CHF6'000.",
+        h4("Health Issues : "),
+        "The only condition that Maine Coons are really prone to is spinal muscular atrophy, a disease that causes degeneration of the spinal cord and atrophy of the hind legs.",
+        br(),
+        br(),
+        "If you're interested in learning more about the Maine Coon, please check out the following site : ",
+        a("The Cat Fanciers' Association : Maine Coon", href = "https://cfa.org/maine-coon-cat/"))
+    }
     
     
   })
   
- 
+  
   #Map of Geneva's veterinarians
   library(shiny)
   library(leaflet)
