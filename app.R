@@ -70,7 +70,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      br(),
                                      p("We will show an image of the selected cat breed, display important information about that particular cat breed including : Description of the Breed, Average Lifespan, Average Weight and Size, Average Price, What that Cat Breed is good with (Dogs, Kids, etc)."),
                                      selectInput("catbreeds", h3("Select your cat breed :"),
-                                                 choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Bombay", "British Shorthair", "Devon Rex", "Domestic Longhair", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
+                                                 choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Bombay", "British Shorthair", "Devon Rex", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
                                      textOutput("selected_catbreeds"),
                                      br(),
                                      uiOutput(("catbreedimage")), 
@@ -195,10 +195,6 @@ server <- function(input, output) {
     } else if (input$catbreeds == "Devon Rex") {
       
       img(height = 200, width = 300, src = "devon-rex.jpg")
-      
-    } else if (input$catbreeds == "Domestic Longhair") {
-      
-      img(height = 200, width = 300, src = "domestic-longhair.jpg")
       
     } else if (input$catbreeds == "Exotic Shorthair") {
       
