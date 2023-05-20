@@ -91,7 +91,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             tabPanel("About Us",
                                      br(),
                                      br(),
-                                     h3("Get to know about us and meet incredible the team", style = "color:orange"),
+                                     h3("Get to Know About Us and Meet Our Incredible Team", style = "color:orange"),
                                      br() ,
                                      br() ,
                                      p("Whether you're a proud cat owner, a cat enthusiast, or someone looking to learn more about these fascinating creatures, you've come to the right place. Our application is designed to provide you with a comprehensive experience when it comes to cat knowledge, veterinary services, and information about different cat breeds."),
@@ -108,7 +108,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      p("CatChooser.com is more than just an application…it's a community of cat lovers. Connect with fellow cat enthusiasts, share stories, and exchange valuable insights. Our goal is to create a space where cat lovers can come together to celebrate the wonderful world of these adorable felines."),
                                      br(),
                                      br(),
-                                     h4("Meet the Our Ailurophile Team:"),
+                                     h4("Meet Our Ailurophile Team:"),
                                      br(),
                                      p(""),
                                      div(class = "container",
@@ -116,44 +116,35 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                              
                                              # Colonne 1
                                              div(class = "col-md-4",
-                                                 h3("Membre 1"),
+                                                 h3("Nelson Chikuru"),
                                                  img(src = "nelson-chikuru.jpg", class = "img-responsive"),
-                                                 p("Description du membre 1"),
-                                                 h4("Rôle occupé :"),
-                                                 p("Rôle membre 1"),
-                                                 h4("Description du rôle :"),
-                                                 p("Description du rôle membre 1"),
+                                                 h4("Marketing Manager:"),
+                                                 p("Nelson develops and implements effective marketing strategies, manages campaigns, conducts market research, and oversees brand management. Nelson collaborates with internal teams and external partners for seamless coordination. It requires market knowledge, project management skills, and creative thinking."),
                                                  h4("Contacts :"),
-                                                 p("Email : membre1@example.com"),
-                                                 p("Téléphone : +1 123 456 789")
+                                                 p(a("Email : nelson.chikuru@etu.unige.ch", href = "mailto:nelson.chikuru@etu.unige.ch")),
+                                                 p(a("Téléphone : +41 78 786 24 35", href = "tel:+41 78 786 24 35"))
                                              ),
                                              
                                              # Colonne 2
                                              div(class = "col-md-4",
-                                                 h3("Membre 2"),
+                                                 h3("Karl Mayers"),
                                                  img(src = "karl-mayers.jpeg", class = "img-responsive"),
-                                                 p("Description du membre 2"),
-                                                 h4("Rôle occupé :"),
-                                                 p("Rôle membre 2"),
-                                                 h4("Description du rôle :"),
-                                                 p("Description du rôle membre 2"),
+                                                 h4("Operation Manager :"),
+                                                 p("Karl oversees and manages day-to-day operations, ensuring efficient processes, resource allocation, and timely execution of projects. He is responsible for optimizing productivity, streamlining workflows, and achieving operational objectives. It demand strong organizational, problem-solving, and leadership skills."),
                                                  h4("Contacts :"),
-                                                 p("Email : membre2@example.com"),
-                                                 p("Téléphone : +1 987 654 321")
+                                                 p(a("Email : karl.myers@etu.unige.ch", href ="mailto:karl.myers@etu.unige.ch")),
+                                                 p(a("Téléphone : +41 78 711 50 00", href = "tel:+41 78 711 50 00"))
                                              ),
                                              
                                              # Colonne 3
                                              div(class = "col-md-4",
-                                                 h3("Membre 3"),
+                                                 h3("Hugo Francisco"),
                                                  img(src = "hugo-hugo.jpeg", class = "img-responsive"),
-                                                 p("Description du membre 3"),
-                                                 h4("Rôle occupé :"),
-                                                 p("Rôle membre 3"),
-                                                 h4("Description du rôle :"),
-                                                 p("Description du rôle membre 3"),
+                                                 h4("Web Architect :"),
+                                                 p("Hugo designs and develops high-level architecture for web applications, ensuring scalability, performance, and security. He collaborates with cross-functional teams to define technical requirements and implement best practices. It requires expertise in web technologies, strong problem-solving skills, and a deep understanding of software architecture principles."),
                                                  h4("Contacts :"),
-                                                 p("Email : membre3@example.com"),
-                                                 p("Téléphone : +1 555 123 456")
+                                                 p(a("Email : hugo.francisco@etu.unige.ch", href = "mailto:hugo.francisco@etu.unige.ch")),
+                                                 p(a("Téléphone : +33 6 25 34 52 20",href = "tel:+33 6 25 34 52 20"))
                                              )
                                          )
                                      )
