@@ -127,8 +127,8 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                              
                                              # Colonne 2
                                              div(class = "col-md-4",
-                                                 h3("Karl Mayers"),
-                                                 img(src = "karl-mayers.jpeg", class = "img-responsive"),
+                                                 h3("Karl Myers"),
+                                                 img(src = "karl-myers.jpeg", class = "img-responsive"),
                                                  h4("Operation Manager :"),
                                                  p("Karl oversees and manages day-to-day operations, ensuring efficient processes, resource allocation, and timely execution of projects. He is responsible for optimizing productivity, streamlining workflows, and achieving operational objectives. It demand strong organizational, problem-solving, and leadership skills."),
                                                  h4("Contacts :"),
