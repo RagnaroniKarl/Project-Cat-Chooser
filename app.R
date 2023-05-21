@@ -1,3 +1,4 @@
+
 #package necessary to intall in order to run our app 
 
 #install.packages("shiny")
@@ -90,17 +91,29 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      p(" * The website link if one exists."),
                                      br(),
                                      br(),
-                                     leafletOutput("map"),
-                            ),
-                
-                            
-                            #Adoptions Centers
-                            tabPanel("Adoption Centers Near Me", 
-                                     h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange")),
-                                     br(),
-                                     p("Presented below is a map highlighting the locations of several adoption centers in and around the Geneva area. By clicking on the respective icon, you can access detailed information about each adoption center, including the center's name, address, telephone numbers, their general rating out of 5, and a provided website link."),
-                                     br(),
                                      leafletOutput("map")),
+                            #Adoptions Centers
+                            tabPanel("Adoption Center Near Me",
+                                     tags$iframe(src = "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d17491.973560411874!2d6.1448458!3d46.2045189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scentre%20d'adoption%20de%20chat%20au%20alentour%20de%20geneve!5e0!3m2!1sfr!2sch!4v1621522067515!5m2!1sfr!2sch",
+                                                 width = "100%", height = "600px"),
+                                     p("Cliquez sur le lien ci-dessous pour ouvrir la carte Google Maps avec les informations détaillées des centres d'adoption de chats aux alentours de Genève."),
+                                     a("Ouvrir la carte Google Maps", href = "https://www.google.com/maps/search/centre+d'adoption+de+chat+au+alentour+de+geneve/@46.2045189,6.1448458,13z", target = "_blank"),
+                                     tags$script("
+                    function initMap() {
+                      var center = {lat: 46.2045189, lng: 6.1448458};
+                      var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 13,
+                        center: center
+                      });
+                      var marker = new google.maps.Marker({
+                        position: center,
+                        map: map,
+                        title: 'Centre d\'adoption de chats'
+                      });
+                    }
+                    "),
+                                     tags$script(src = "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap", async = TRUE)
+    ),
                             
                             #Random Cat Facts
                             tabPanel("About Cats", 
@@ -210,6 +223,8 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             )
                 )
 )
+
+
 
 # )
 #)
@@ -726,11 +741,11 @@ server <- function(input, output) {
       website <- veterinaries$website[i]
       
       popup_content <- paste0("<b>", name, "</b><br>",
-                              "Rating : ", rating, "/5<br>",
-                              "Place : ", place, "<br>",
-                              "Adress : ", address, "<br>",
-                              "Phone : ", phone, "<br>",
-                              "Website : ", website, "<br>")
+                              "Avis : ", rating, "/5<br>",
+                              "Lieu : ", place, "<br>",
+                              "Adresse : ", address, "<br>",
+                              "Téléphone : ", phone, "<br>",
+                              "Site internet : ", website, "<br>")
       
       geneva_map <- geneva_map %>%
         addMarkers(lng = longitude, lat = latitude, popup = popup_content)
@@ -739,64 +754,9 @@ server <- function(input, output) {
     # Afficher la carte
     geneva_map
   })
-  
-  
-  #Map of adoption centers in and around Geneva
-  library(shiny)
-  library(leaflet)
-  
-  # Define the Shiny application user interface
-  ui <- fluidPage(
-    leafletOutput("map")
-  )
-  
-  # Define the Shiny application server
-  server <- function(input, output) {
-    
-    # Data for adoption centers
-    adoption_centers <- data.frame(
-      name = c("Refuge de l'espoir - Arthaz", "Société Protectrice des Animaux (SPA) Refuge Vailly", "SOS Chats", "Refuge de la SPA La Côte", "Centre et Refuge SVPA"),
-      address = c("284 Rte de la Basse Arve, 74380 Arthaz Pont-Notre-Dame, France", "Av. de Cavoitanne 5, 1233 Bernex", "Chem. du Plantin 2, 1217 Meyrin, Suisse", "Chem. du Bochet 20, 1260 Nyon, Suisse", "Rte de Berne 318, 1000 Lausanne, Suisse"),
-      rating = c(4.2, 4.3, 4.2, 4.3, 4.4),
-      phone = c("+33 4 50 36 02 80", "+41 22 757 13 23", "+41 22 785 32 84", "+41 22 361 61 15", "+41 21 784 80 00"),
-      website = c("www.dons.animaux-secours.fr", "www.sgpa.ch", "http://www.sos-chats.ch/", "https://www.spalacote.ch/", "http://www.svpa.ch/"),
-      latitude = c(46.166053, 46.171801, 46.224682, 46.406120, 46.570829),
-      longitude = c(6.245335, 6.051797, 6.085156, 6.213761, 6.711519)
-    )
-    
-    # Render the leaflet map
-    output$map <- renderLeaflet({
-      
-      # Create a map centered on Geneva
-      geneva_map <- leaflet() %>%
-        setView(lng = 6.1432, lat = 46.2044, zoom = 12) %>%
-        addTiles()
-      
-      # Add markers for adoption centers with additional information
-      for (i in 1:nrow(adoption_centers)) {
-        name <- adoption_centers$name[i]
-        address <- adoption_centers$address[i]
-        rating <- adoption_centers$rating[i]
-        phone <- adoption_centers$phone[i]
-        website <- adoption_centers$website[i]
-        latitude <- adoption_centers$latitude[i]
-        longitude <- adoption_centers$longitude[i]
-        
-        popup_content <- paste0("<b>", name, "</b><br>",
-                                "Address: ", address, "<br>",
-                                "Rating: ", rating, "/5<br>",
-                                "Phone: ", phone, "<br>",
-                                "Website: ", website, "<br>")
-        
-        geneva_map <- geneva_map %>%
-          addMarkers(lng = longitude, lat = latitude, popup = popup_content)
-      }
-      
-      # Display the map
-      geneva_map
-    })
-  }
 }
+
+
 
 
 # Run the application 
