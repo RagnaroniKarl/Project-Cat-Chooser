@@ -1,0 +1,11 @@
+name: project-cat-chooser
+title:
+username:
+account: project-cat-chooser
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9156183
+bundleId: 7245447
+url: https://project-cat-chooser.shinyapps.io/project-cat-chooser/
+when: 1684706125.40776
+lastSyncTime: 1684706125.40781
