@@ -1,4 +1,3 @@
-
 #package necessary to intall in order to run our app 
 
 #install.packages("shiny")
@@ -91,7 +90,9 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      p(" * The website link if one exists."),
                                      br(),
                                      br(),
-                                     leafletOutput("map")),
+                                     leafletOutput("map"),
+                            ),
+                
                             
                             #Adoptions Centers
                             tabPanel("Adoption Centers Near Me", 
@@ -208,7 +209,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      )
                             )
                 )
-
+)
 
 # )
 #)
@@ -752,7 +753,7 @@ server <- function(input, output) {
   # Define the Shiny application server
   server <- function(input, output) {
     
-    # Example data for adoption centers
+    # Data for adoption centers
     adoption_centers <- data.frame(
       name = c("Refuge de l'espoir - Arthaz", "Société Protectrice des Animaux (SPA) Refuge Vailly", "SOS Chats", "Refuge de la SPA La Côte", "Centre et Refuge SVPA"),
       address = c("284 Rte de la Basse Arve, 74380 Arthaz Pont-Notre-Dame, France", "Av. de Cavoitanne 5, 1233 Bernex", "Chem. du Plantin 2, 1217 Meyrin, Suisse", "Chem. du Bochet 20, 1260 Nyon, Suisse", "Rte de Berne 318, 1000 Lausanne, Suisse"),
