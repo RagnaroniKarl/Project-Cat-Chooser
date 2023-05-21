@@ -79,7 +79,8 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             ),
                             #Vets near me tab!
                             tabPanel("Vetenarians Near Me", 
-                                     h3("This is where you can find local vets in your area!", style = "color:orange")),
+                                     h3("This is where you can find local vets in your area!", style = "color:orange"),
+                                     leafletOutput("map")),
                             
                             #Adoptions Centers
                             tabPanel("Adoption Centers Near Me", h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange")),
