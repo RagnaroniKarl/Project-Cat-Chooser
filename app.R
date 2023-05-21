@@ -96,8 +96,8 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             tabPanel("Adoption Center Near Me",
                                      tags$iframe(src = "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d17491.973560411874!2d6.1448458!3d46.2045189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scentre%20d'adoption%20de%20chat%20au%20alentour%20de%20geneve!5e0!3m2!1sfr!2sch!4v1621522067515!5m2!1sfr!2sch",
                                                  width = "100%", height = "600px"),
-                                     p("Click on the link below to open the Google Maps with detailed information on cat adoption centers around Geneva."),
-                                     a("Open Google Maps", href = "https://www.google.com/maps/search/centre+d'adoption+de+chat+au+alentour+de+geneve/@46.2045189,6.1448458,13z", target = "_blank"),
+                                     p("Cliquez sur le lien ci-dessous pour ouvrir la carte Google Maps avec les informations détaillées des centres d'adoption de chats aux alentours de Genève."),
+                                     a("Ouvrir la carte Google Maps", href = "https://www.google.com/maps/search/centre+d'adoption+de+chat+au+alentour+de+geneve/@46.2045189,6.1448458,13z", target = "_blank"),
                                      tags$script("
                     function initMap() {
                       var center = {lat: 46.2045189, lng: 6.1448458};
@@ -113,7 +113,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                     }
                     "),
                                      tags$script(src = "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap", async = TRUE)
-    ),
+                            ),
                             
                             #Random Cat Facts
                             tabPanel("About Cats", 
@@ -189,7 +189,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                              # Colonne 1
                                              div(class = "col-md-4",
                                                  h3("Nelson Chikuru"),
-                                                 img(src = "nelson-chikuru petite.jpeg", class = "img-responsive"),
+                                                 img(src = "nelson-chikuru Petite.jpeg", class = "img-responsive"),
                                                  h4("Marketing Manager:"),
                                                  p("Nelson develops and implements effective marketing strategies, manages campaigns, conducts market research, and oversees brand management. Nelson collaborates with internal teams and external partners for seamless coordination. It requires market knowledge, project management skills, and creative thinking."),
                                                  h4("Contacts :"),
