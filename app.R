@@ -60,7 +60,6 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      ),
                                      img(src = "kitten-adoption.jpg", height = 290, width = 590, align = 'left')
                             ),
-                         
                             
                             
                             
@@ -78,24 +77,15 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      br(),
                                      uiOutput("catbreedinfo"),
                             ),
-                            
                             #Vets near me tab!
                             tabPanel("Vetenarians Near Me", 
                                      h3("This is where you can find local vets in your area!", style = "color:orange"),
                                      leafletOutput("map")),
-                                     br(),
-                                     h3("This is where you can find local vets in your area!", style = "color:orange")),
-                            br(), 
-                            p("This is where you can find all the necessary informations about vetenarians available in the canton of Geneva"),
-                            br(),
-                            leafletOutput(("map")),
-                )
-                
                             #Adoptions Centers
-                            tabPanel("Adoption Centers Near Me", h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange"))
+                            tabPanel("Adoption Centers Near Me", h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange")),
                             
                             #Random Cat Facts
-                            tabPanel("Random Cat Facts", h3("Here are some random cat facts you may find very interesting!", style = "color:orange"),)
+                            tabPanel("Random Cat Facts", h3("Here are some random cat facts you may find very interesting!", style = "color:orange"),),
                             
                             #About us 
                             tabPanel("About Us",
@@ -166,12 +156,6 @@ ui <- fluidPage(theme = shinytheme("darkly"),
 
 # )
 #)
-
-                                                       
-                                     
-               
-                # )
-                #)
 
 
 #outputs
@@ -269,7 +253,7 @@ server <- function(input, output) {
         "The Abyssinian cat is believed to be the cat breed once owned by the kings of Ancient Egypt : the Pharaohs, however some people believe they are the result of Victorian English catbreeders where the name comes from, they were imported from Abyssinia, today's Ethiopia. The Abyssinian is a short haired cat that doesn't shed. It's color can best be described as a reddish-brown or 'ruddy' base with black ticking, a trait of tabby cats. It has either green or gold/sulfrur eyes", 
         br(), 
         br(), 
-        "The Abyssinian has a lifespan of about 9 to 15 years. They can be between 30 and 40 cm in length. Unfortunately for some, it is a somewhat hypoallergenic cat. They are friendly with kids and even get along with pets, they make generally good family cats. They tend to be more on the quiet end, with a low tendency to vocalize. The average price of an Abyssinian ranges from CHF500 to CHF1'200.", 
+        "The Abyssinian has a lifespan of about 9 to 15 years. They can be between 30 and 40 cm in length. Luckily for those who are allergic to cats, they are somewhat hypoallergenic cats. They are friendly with kids and even get along with pets, they make generally good family cats. They tend to be more on the quiet end, with a low tendency to vocalize. The average price of an Abyssinian ranges from CHF500 to CHF1'200.", 
         br(), 
         br(), 
         h4("Health Issues : "),
@@ -322,7 +306,7 @@ server <- function(input, output) {
         "The American Shorthair is a cat that can trace its origins to the European settlers that moved to North America. They were valued on the ships for that rodent hunting abilities. Some were even belived to be present on the famous, to Americans of course, Mayflower ship. For this and many other reasons, they are one of the most popular cat breeds on the North American continent. For coloring, they can be white, silver (light grey), black, cream, brown and red. These colorings are found under mostly the tabby cat pattern (see image), however calico, tortoiseshell, bi-color and solid do exist. Their eyes can be gold, blue, copper or green.", 
         br(), 
         br(), 
-        "The American Shorthair can live up to 15 to 20 years if well taken care of. They can be between 30 and 38 cm in legth and can weigh between 4.5 and 6.8 kilograms. American Shorthair cats are not hypoallergenic cats so people with allergies should go well with them. They are moderately prone to shedding and vocalizing and they are very family friendly cats being good with little kids and other pets. When it comes to price, the American Shorthair is more afforable than many other cats on this site, ranging from CHF500 to CHF800.", 
+        "The American Shorthair can live up to 15 to 20 years if well taken care of. They can be between 30 and 38 cm in legth and can weigh between 4.5 and 6.8 kilograms. American Shorthair cats are not hypoallergenic cats so people with allergies should beware. They are moderately prone to shedding and vocalizing and they are very family friendly cats being good with little kids and other pets. When it comes to price, the American Shorthair is more afforable than many other cats on this site, ranging from CHF500 to CHF800.", 
         br(), 
         br(), 
         h4("Health Issues : "),
@@ -338,7 +322,7 @@ server <- function(input, output) {
         "The Balinese looks like a long haired Siamese cat due to a genetic mutation that caused some Siamese to grow longer fur. For their colors, they have the distinctly Siamese look of the white or cream colored body with darker, usually dark brown or grey brown, accents on the face, ears, legs and tail. As for their eyes, they have deep blue eyes that all Siamese cats possess.",
         br(),
         br(),
-        "The Balinese has a life expectancy of 12 to 20 years depending on the care of the owner. They can be about 45 cm long in length. When it goes to weight, they can weigh between 3.6 and about 5 kilos. Being related to the Siamese family, the Balinese is a rather noisy cat and they will shed a lot of fur. They are considered hypoallergenic cats. The average Balinese can cost you between CHF400 to CHF1'500.",
+        "The Balinese has a life expectancy of 12 to 20 years depending on the care of the owner. They can be about 45 cm long in length. When it goes to weight, they can weigh between 3.6 and about 5 kilos. Being related to the Siamese family, the Balinese is a rather noisy cat and they will shed a lot of fur. They are considered hypoallergenic cats so they're good for people with allergies. The average Balinese can cost you between CHF400 to CHF1'500.",
         br(),
         br(),
         h4("Health Issues : "),
@@ -437,7 +421,7 @@ server <- function(input, output) {
         "The Devon Rex is often compared to an alien. Its large  ears, giant eyes and rather angular face. It has a somewhat unique coat of fur that can be described as 'wavy'. In terms of fur colors and eye colors, it can have any of the standard cat colors. The breed was discovered in Devonshire, England in 1960 when a woman found a bizarre looking kitten. She thought the kitten was related to the Cornish Rex which is why the breed is called the Devon Rex.",
         br(),
         br(),
-        "The average Devon Rex can live for between 9 to 15 years depending on quality of care from the owner. Its length can range up to about 45 cm and it can between 2.7 to 4 kilograms, making them a rather small breed of cat. They are a hypoallergenic breed of cat. The Devon Rex is known to be very active, social and a friendly temperament.The average Devon Rex will cost you between CHF350 to CHF2'500.",
+        "The average Devon Rex can live for between 9 to 15 years depending on quality of care from the owner. Its length can range up to about 45 cm and it can between 2.7 to 4 kilograms, making them a rather small breed of cat. They are a hypoallergenic breed of cat making them good for people with allergies. The Devon Rex is known to be very active, social and a friendly temperament.The average Devon Rex will cost you between CHF350 to CHF2'500.",
         h4("Health Issues : "),
         "The Devon Rex is unfortunately prone to a few health conditions :", 
         br(),
@@ -474,7 +458,7 @@ server <- function(input, output) {
         "Created when breeders crossed Persian and Siamese cats, the Himalayan is best described as a long haired Siamese. They are actually a relatively young breed of cat, being less than 100 years. They are distinguishable by their white to cream coats and darker extremities like their faces, legs, ears and tail. These extremities can be chocolate, seal or lilac in coloring. As for their eyes, they have the iconic blue eyes of the Siamese cat.", 
         br(),
         br(),
-        "A well taken care of Himalayan can live up to 15 years old. The Himalayan can weigh from 3 kilos all the way up to 5 kilograms and have be anywhere between 30 to 40 centimeters in length. They aren't hypoallergenic however their long fur makes them high-maintenance cats as they need daily brushing and care. They generally get along with little kids and pets. If you want to buy a Himalayan cat, it will cost you anywhere between CHF500 to CHF1'000.",
+        "A well taken care of Himalayan can live up to 15 years old. The Himalayan can weigh from 3 kilos all the way up to 5 kilograms and have be anywhere between 30 to 40 centimeters in length. They aren't hypoallergenic and their long fur makes them high-maintenance cats as they need daily brushing and care. They generally get along with little kids and pets. If you want to buy a Himalayan cat, it will cost you anywhere between CHF500 to CHF1'000.",
         h4("Health Issues : "),
         "The Himalayan cat is prone to many of the same health conditions as Persians and other Persian derived breeds.",
         br(),
@@ -528,7 +512,7 @@ server <- function(input, output) {
         "One of the most iconic breeds of all time, Persians have been around for thousands of years, tracing back its heritage to ancient Persia (modern day Iran). It is recognizable by its round, flat face and its large coat of fur. Just about any cat color possible can be found found in a Persian, including the Siamese looks. As for their eye colors, they can be found in gold, green, blue, hazel or even a red color. It is currently the most pedigreed cat in the United States and large parts of the world.", 
         br(),
         br(),
-        "A healthy, well-taken care of Persian can live anywhere between 15 to 20 years of age. Their average weight is between 3 to 5 kilos and their average length is between 35 to 43 cm. They are cuddly, affectionate cats that are rather high maintenance because of their long fur coat. They are surprisingly not hypoallergenic. They are not always the best with little kids or other pets. The average Persian cat will cost you anywhere between CHF500 to CHF5'000",
+        "A healthy, well-taken care of Persian can live anywhere between 15 to 20 years of age. Their average weight is between 3 to 5 kilos and their average length is between 35 to 43 cm. They are cuddly, affectionate cats that are rather high maintenance because of their long fur coat. They are unsurprisingly not hypoallergenic. They are not always the best with little kids or other pets. The average Persian cat will cost you anywhere between CHF500 to CHF5'000",
         h4("Health Issues : "),
         " The Persian cat is prone to quite a few genetic disorders as well as hypertrophic cardiomyopathy :",
         br(),
@@ -568,7 +552,53 @@ server <- function(input, output) {
         br(),
         "If you want to learn more about the elusive Savannah cat, please have a look at the site provided below (please note that the Cat Fanciers' Association does not have a page on the Savannah due to it not being a recognized breed yet) :  ",
         a("Wikipedia : Savannah Cat", href = "https://en.wikipedia.org/wiki/Savannah_cat"))
-      
+    } else if (input$catbreeds == "Scottish Fold"){
+      p(style = "text-align : justify;",
+        "The Scottish Fold is famous for its namesake trait : its folded ears. The ears fold forwards and downward. The origin of the fold is said to come from a genetic mutation found in a barn in Scotland in the early 1960s, hence where the Scottish part of the Scottish Fold name comes from. The Scottish Fold can be found in many colors such as : brown, black, grey, white, cream and even red. It is most commonly found with short hair however a rarer long hair Scottish Fold does exist.",
+        br(),
+        br(),
+        "The Scottish Fold can weigh up to 5 kilos and can measure up to 76 cm in length. They are not hypoallergenic cats, they are quiet and don't shed much. The Scottish Fold is good with families and dogs because of its good temperament and affectionate personality. If you want to purchase a Scottish Fold, it can cost you between CHF250 to CHF500.",
+        br(),
+        br(),
+        h4("Health Issues : "),
+        "The Scottish Fold is prone to a few medical conditions. So if you have any concerns, please consult a vet.",
+        br(),
+        br(), 
+        "The biggest concern when it comes to Scottish Folds is a genetic disease called 'osteochondrodysplasia' which affects bone development and cartilage, which is also associated to the same gene as the fold ears. Signs of this disease are : problems moving hind legs, stiff tails and stiff hind joints.",
+        br(), 
+        br(),
+        "They are also prone to heart problems like hypertrophic cardiomyopathy",
+        br(),
+        br(),
+        "And Polycystic kidney disease",
+        br(),
+        br(),
+        "If you are curious and want to know more about the Scottish Fold, please have a look at the site linked below : ",
+        a("The Cat Fanciers' Association : Scottish Fold", href = "https://cfa.org/scottish-fold/"))
+    } else if (input$catbreeds == "Siamese"){
+      p(style = "text-align : justify;",
+        "The Siamese is easily one of the most iconic and recognizable cat breeds out there. Probably the most recognizable cat breed on Earth. Their name comes from their location of origin, Siam (today's Thailand). They were and still valued across the world by cat lovers. They are immediately recognizable by their light colored (usually white, cream or beige) body and their darker 'points' which can be seal, chocolate, blue or lilac. They are also famous for their big blue eyes!",
+        br(),
+        br(),
+        "The average Siamese can live up to 15 years old. They can weigh up to around 6 and a half kilos and measure up to 60 cm. They are not hypoallergenic. Siamese tend to bond very strongly with their family and are very vocal and talkative cats. They can get depressed if left alone for long periods of time. The average Siamese cat can cost anywhere between CHF250 to CHF1'000.",
+        br(),
+        br(),
+        h4("Health Issues : "),
+        "The Siamese is prone to a few health issues. As always, they are prone to hypertrophic cardiomyopathy.",
+        br(),
+        br(),
+        "The most striking condition for Siamese cat is their crossed-eyes. This is caused by the same gene that gives them their colored points, this means they have worse vision than other cat breeds so they are more prone to accidents at night and other vision related problems.",
+        br(),
+        br(),
+        "Breathing problems, Siamese with wedge shaped heads are more prone to having asthma and bronchial disease.",
+        br(),
+        br(),
+        "Amyloidosis : This is a liver or kidney problem that is caused by an abnormal protein that is deposited in the body's organs.",
+        br(),
+        br(),
+        "If you are interested and want to learn more about the wonderful Siamese cat, please check out the following link : ",
+        a("The Cat Fanciers' Association : Siamese Cat", href = "https://cfa.org/siamese")
+        )
       
       
       
@@ -579,7 +609,6 @@ server <- function(input, output) {
   
   
   #Map of Geneva's veterinarians
-
   library(shiny)
   library(leaflet)
   
@@ -618,59 +647,20 @@ server <- function(input, output) {
         longitude <- veterinaries$longitude[i]
         phone <- veterinaries$phone[i]
         website <- veterinaries$website[i]
-
-    library(shiny)
-    library(leaflet)
-    
-    # Définir l'interface utilisateur de l'application Shiny
-    ui <- fluidPage(
-      leafletOutput("map")
-    )
-    
-    # Définir le serveur de l'application Shiny
-    server <- function(input, output) {
-      output$map <- renderLeaflet({
-        # Exemple de données de vétérinaires
-        veterinaries <- data.frame(
-          name = c("AMACKER Véronique", "AMBERGER Christophe, PHILIP Laurence", "BORER Luc, BORER-GERMANN Stéphanie, BRIZARD Delphine, FOELLMI Jérôme", "BOSSHART Marc-Antoine, DAYER Geneviève", "CAMPBELL Robert", "CAPOZZI Alessandro", "CARQUILLAT Delphine, LUKA Gabor", "CASELLINI Martine", "CATHENOZ Yold-Lin, CHAPUS MICHAUD Amélie, PIALAT Dahlia", "GELEHRTER Mira", "GOTTLIEBEROVA Elena, PORCHET Marie-José", "GUERNE Alain, UEBERSAX Wolfgang", "HUGI Doris", "LAMBRIGGER Nadine", "LA NAIA Vincenzo", "LAURENT Sentha", "LEGRUM Mariam, VOUILLON Tanguy", "LUKA Pia", "MAILLARD VERHAGEN Ariane", "NEAGU Andrea", "PAPADOPOULOS Konstantinos, ZOTOU Natacha", "PEREZ ROMO Federico", "RITTER Corinne", "SPYCHER Rodolphe", "TER KUILE Pierre", "TORRES Alejandro"),
-          place = c("Service à domicile", "Cabinet Vétérinaire et Centre d'Imagerie", "VetSpécialistes", "Cabinet vétérinaire des Sources", "Cabinet vétérinaire de Saint-Jean", "Cabinet vétérinaire du Clos de la Fonderie", "Cabinet vétérinaire de Vésenaz", "Cabinet vétérinaire de Caroll", "Cabinet vétérinaire de Riantbosson", "Cabinet vétérinaire de la Jonction", "Cabinet vétérinaire de Chêne-Bougeries", "Cabinet vétérinaire des Tuileries", "Cabinet vétérinaire des Deux-Communes", "Cabinet Vétérinaire de Bernex", "Cabinet vétérinaire Bestiaire du Rhône", "Cabinet vétérinaire des Promenades", "Cabinet vétérinaire de Collonge-Bellerive", "Cabinet vétérinaire des Hauts de Carouge", "Veto-Psy - vétérinaire comportementaliste", "VetTravel", "Cabinet vétérinaire de Champel", "Cabinet vétérinaire de la Versoix", "Cabinet vétérinaire de Villereuse", "Cabinet vétérinaire de Frontenex", "Cabinet vétérinaire des Pontets", "Cabinet vétérinaire des Acacias"),
-          rating = c(5, 3.8, 4.5, 4.5, 4.3, 4.8, 4.2, 4.3, 4.6, 3.4, 4.7, 4.7, 4.6, 4.7, 4.9, 4.9, 4.7, 4.7, 4.3, 4.7, 4.8, 4, 4.2, 4.3, 4.1, 4.8),
-          address = c("Route de Laconnex 100, 1287 Laconnex", "Rue de la Servette 96, 1202 Genève", "Rte de Ferney 194B, 1218 Grand-Saconnex", "Rue des Sources 10, 1205 Genève", "Rue de Saint-Jean 28, 1203 Genève", "Clos-de-la-Fonderie 23, 1227 Carouge", "Route d'Hermance 8, 1222 Vésenaz", "Chemin de la Caroline 18a, 1213 Petit-Lancy", "Chemin de Riantbosson 5, 1217 Meyrin", "38 Boulevard Carl-Vogt, 1205 Genève", "Rue de Chêne-Bougeries 31, 1224 Chêne-Bougeries", "Chemin des Tuileries 42, 1293 Bellevue", "Chemin des Deux-Communes 21, 1226 Thônex", "Chemin de la Distillerie 12, 1233 Bernex", "Chemin du 23-Août 4, 1205 Genève", "Boulevard des Promenades 22, 1227 Carouge", "Route d'Hermance 95, 1245 Collonge-Bellerive", "Route de Saint-Julien 19, 1227 Carouge", "Rue de la Coupe Gordon-Bennett 2, 1219 Aïre", "Coupe Gordon-Bennett 2, 1219 Le Lignon", "Rue Pedro-Meylan 1, 1208 Genève", "Rampe de la Gare 6, 1290 Versoix", "Rue de Villereuse 7, 1207 Genève", "Rue Viollier 10, 1207 Genève", "Case Postale 582, 1212 Grand-Lancy", "Rte des Acacias 18, 1227 Les Acacias"),
-          latitude = c(46.1630375, 46.2133737, 46.2351041, 46.195877, 46.2043452, 46.1858175, 46.240613, 46.191012, 46.226302, 46.198451, 46.196273, 46.252776, 46.194043, 46.177563, 46.202942, 46.1820537, 46.252583, 46.1767047, 46.205218, 46.205145, 46.195716, 46.279749, 46.199889, 46.201207, 46.173957, 46.191710),
-          longitude = c(6.0422094, 6.128216, 6.1223517, 6.144583, 6.1281351, 6.1458293, 6.198072, 6.108927, 6.083383, 6.134992, 6.190887, 6.143145, 6.201620, 6.077023, 6.134026, 6.1374464, 6.203052, 6.1335575, 6.103946, 6.104021, 6.163799, 6.166744, 6.158398, 6.164067, 6.123575, 6.136614),
-          phone = c("079 341 47 72", "022 734 42 48", "022 708 11 33", "022 708 11 99", "022 340 27 27", "022 342 74 00", "022 752 67 67", "022 792 12 05", "022 719 10 10", "022 995 96 97", "022 349 63 33", "022 774 25 25", "022 348 58 00", "022 757 61 18", "022 320 43 43", "022 343 30 80", "022 752 34 11", "022 343 22 22", "079 154 35 79", "079 120 65 12", "022 736 00 06", "022 755 46 24", "022 736 44 00", "022 840 08 68", "022 884 18 28", "022 342 45 46"),
-          website = c("non", "http://www.imavet.ch", "https://vetspecialistes.ch/", "non", "http://veto-stjean.ch", "http://www.veterinaire-carouge.com", "http://www.vetvesenaz.ch", "non", "http://www.vetriantbosson.ch", "non", "http://www.vet-chene-bougeries.ch", "non", "non", "https://vetbernex.ch/", "http://www.bestiaire.ch", "non", "https://vet-collonge-bellerive.ch/", "non", "http://www.veto-psy.ch", "http://www.vettravel.info", "https://www.vetchampel.ch/", "non", "http://www.vet-villereuse.ch", "non", "http://www.terkuile.tk", "https://www.cabinetveterinairedesacacias.com/")
-        )
         
-        # Créer une carte centrée sur Genève
-        geneva_map <- leaflet() %>%
-          setView(lng = 6.1432, lat = 46.2044, zoom = 12) %>%
-          addTiles()
+        popup_content <- paste0("<b>", name, "</b><br>",
+                                "Avis : ", rating, "/5<br>",
+                                "Lieu : ", place, "<br>",
+                                "Adresse : ", address, "<br>",
+                                "Téléphone : ", phone, "<br>",
+                                "Site internet : ", website, "<br>")
         
-        # Ajouter les marqueurs de vétérinaires avec informations supplémentaires
-        for (i in 1:nrow(veterinaries)) {
-          name <- veterinaries$name[i]
-          place <- veterinaries$place[i]
-          rating <- veterinaries$rating[i]
-          address <- veterinaries$address[i]
-          latitude <- veterinaries$latitude[i]
-          longitude <- veterinaries$longitude[i]
-          phone <- veterinaries$phone[i]
-          website <- veterinaries$website[i]
-          
-          popup_content <- paste0("<b>", name, "</b><br>",
-                                  "Avis : ", rating, "/5<br>",
-                                  "Lieu : ", place, "<br>",
-                                  "Adresse : ", address, "<br>",
-                                  "Téléphone : ", phone, "<br>",
-                                  "Site internet : ", website, "<br>")
-          
-          geneva_map <- geneva_map %>%
-            addMarkers(lng = longitude, lat = latitude, popup = popup_content)
-        }
-        
-        # Afficher la carte
-        geneva_map
+        geneva_map <- geneva_map %>%
+          addMarkers(lng = longitude, lat = latitude, popup = popup_content)
+      }
+      
+      # Afficher la carte
+      geneva_map
     })
   }
   
