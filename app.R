@@ -60,6 +60,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      ),
                                      img(src = "kitten-adoption.jpg", height = 290, width = 590, align = 'left')
                             ),
+                         
                             
                             
                             
@@ -77,10 +78,22 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      br(),
                                      uiOutput("catbreedinfo"),
                             ),
+                            
                             #Vets near me tab!
                             tabPanel("Vetenarians Near Me", 
+<<<<<<< Updated upstream
                                      h3("This is where you can find local vets in your area!", style = "color:orange"),
                                      leafletOutput("map")),
+=======
+                                     br(),
+                                     h3("This is where you can find local vets in your area!", style = "color:orange")),
+                            br(), 
+                            p("This is where you can find all the necessary informations about vetenarians available in the canton of Geneva"),
+                            br(),
+                            leafletOutput(("map")),
+                ),
+                
+>>>>>>> Stashed changes
                             #Adoptions Centers
                             tabPanel("Adoption Centers Near Me", h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange")),
                             
@@ -150,12 +163,21 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      )
                             )
                 )
+<<<<<<< Updated upstream
 )
 
 
 
 # )
 #)
+=======
+
+                                                       
+                                     
+               
+                # )
+                #)
+>>>>>>> Stashed changes
 
 
 #outputs
@@ -563,6 +585,7 @@ server <- function(input, output) {
   
   
   #Map of Geneva's veterinarians
+<<<<<<< Updated upstream
   library(shiny)
   library(leaflet)
   
@@ -601,20 +624,60 @@ server <- function(input, output) {
         longitude <- veterinaries$longitude[i]
         phone <- veterinaries$phone[i]
         website <- veterinaries$website[i]
+=======
+    library(shiny)
+    library(leaflet)
+    
+    # Définir l'interface utilisateur de l'application Shiny
+    ui <- fluidPage(
+      leafletOutput("map")
+    )
+    
+    # Définir le serveur de l'application Shiny
+    server <- function(input, output) {
+      output$map <- renderLeaflet({
+        # Exemple de données de vétérinaires
+        veterinaries <- data.frame(
+          name = c("AMACKER Véronique", "AMBERGER Christophe, PHILIP Laurence", "BORER Luc, BORER-GERMANN Stéphanie, BRIZARD Delphine, FOELLMI Jérôme", "BOSSHART Marc-Antoine, DAYER Geneviève", "CAMPBELL Robert", "CAPOZZI Alessandro", "CARQUILLAT Delphine, LUKA Gabor", "CASELLINI Martine", "CATHENOZ Yold-Lin, CHAPUS MICHAUD Amélie, PIALAT Dahlia", "GELEHRTER Mira", "GOTTLIEBEROVA Elena, PORCHET Marie-José", "GUERNE Alain, UEBERSAX Wolfgang", "HUGI Doris", "LAMBRIGGER Nadine", "LA NAIA Vincenzo", "LAURENT Sentha", "LEGRUM Mariam, VOUILLON Tanguy", "LUKA Pia", "MAILLARD VERHAGEN Ariane", "NEAGU Andrea", "PAPADOPOULOS Konstantinos, ZOTOU Natacha", "PEREZ ROMO Federico", "RITTER Corinne", "SPYCHER Rodolphe", "TER KUILE Pierre", "TORRES Alejandro"),
+          place = c("Service à domicile", "Cabinet Vétérinaire et Centre d'Imagerie", "VetSpécialistes", "Cabinet vétérinaire des Sources", "Cabinet vétérinaire de Saint-Jean", "Cabinet vétérinaire du Clos de la Fonderie", "Cabinet vétérinaire de Vésenaz", "Cabinet vétérinaire de Caroll", "Cabinet vétérinaire de Riantbosson", "Cabinet vétérinaire de la Jonction", "Cabinet vétérinaire de Chêne-Bougeries", "Cabinet vétérinaire des Tuileries", "Cabinet vétérinaire des Deux-Communes", "Cabinet Vétérinaire de Bernex", "Cabinet vétérinaire Bestiaire du Rhône", "Cabinet vétérinaire des Promenades", "Cabinet vétérinaire de Collonge-Bellerive", "Cabinet vétérinaire des Hauts de Carouge", "Veto-Psy - vétérinaire comportementaliste", "VetTravel", "Cabinet vétérinaire de Champel", "Cabinet vétérinaire de la Versoix", "Cabinet vétérinaire de Villereuse", "Cabinet vétérinaire de Frontenex", "Cabinet vétérinaire des Pontets", "Cabinet vétérinaire des Acacias"),
+          rating = c(5, 3.8, 4.5, 4.5, 4.3, 4.8, 4.2, 4.3, 4.6, 3.4, 4.7, 4.7, 4.6, 4.7, 4.9, 4.9, 4.7, 4.7, 4.3, 4.7, 4.8, 4, 4.2, 4.3, 4.1, 4.8),
+          address = c("Route de Laconnex 100, 1287 Laconnex", "Rue de la Servette 96, 1202 Genève", "Rte de Ferney 194B, 1218 Grand-Saconnex", "Rue des Sources 10, 1205 Genève", "Rue de Saint-Jean 28, 1203 Genève", "Clos-de-la-Fonderie 23, 1227 Carouge", "Route d'Hermance 8, 1222 Vésenaz", "Chemin de la Caroline 18a, 1213 Petit-Lancy", "Chemin de Riantbosson 5, 1217 Meyrin", "38 Boulevard Carl-Vogt, 1205 Genève", "Rue de Chêne-Bougeries 31, 1224 Chêne-Bougeries", "Chemin des Tuileries 42, 1293 Bellevue", "Chemin des Deux-Communes 21, 1226 Thônex", "Chemin de la Distillerie 12, 1233 Bernex", "Chemin du 23-Août 4, 1205 Genève", "Boulevard des Promenades 22, 1227 Carouge", "Route d'Hermance 95, 1245 Collonge-Bellerive", "Route de Saint-Julien 19, 1227 Carouge", "Rue de la Coupe Gordon-Bennett 2, 1219 Aïre", "Coupe Gordon-Bennett 2, 1219 Le Lignon", "Rue Pedro-Meylan 1, 1208 Genève", "Rampe de la Gare 6, 1290 Versoix", "Rue de Villereuse 7, 1207 Genève", "Rue Viollier 10, 1207 Genève", "Case Postale 582, 1212 Grand-Lancy", "Rte des Acacias 18, 1227 Les Acacias"),
+          latitude = c(46.1630375, 46.2133737, 46.2351041, 46.195877, 46.2043452, 46.1858175, 46.240613, 46.191012, 46.226302, 46.198451, 46.196273, 46.252776, 46.194043, 46.177563, 46.202942, 46.1820537, 46.252583, 46.1767047, 46.205218, 46.205145, 46.195716, 46.279749, 46.199889, 46.201207, 46.173957, 46.191710),
+          longitude = c(6.0422094, 6.128216, 6.1223517, 6.144583, 6.1281351, 6.1458293, 6.198072, 6.108927, 6.083383, 6.134992, 6.190887, 6.143145, 6.201620, 6.077023, 6.134026, 6.1374464, 6.203052, 6.1335575, 6.103946, 6.104021, 6.163799, 6.166744, 6.158398, 6.164067, 6.123575, 6.136614),
+          phone = c("079 341 47 72", "022 734 42 48", "022 708 11 33", "022 708 11 99", "022 340 27 27", "022 342 74 00", "022 752 67 67", "022 792 12 05", "022 719 10 10", "022 995 96 97", "022 349 63 33", "022 774 25 25", "022 348 58 00", "022 757 61 18", "022 320 43 43", "022 343 30 80", "022 752 34 11", "022 343 22 22", "079 154 35 79", "079 120 65 12", "022 736 00 06", "022 755 46 24", "022 736 44 00", "022 840 08 68", "022 884 18 28", "022 342 45 46"),
+          website = c("non", "http://www.imavet.ch", "https://vetspecialistes.ch/", "non", "http://veto-stjean.ch", "http://www.veterinaire-carouge.com", "http://www.vetvesenaz.ch", "non", "http://www.vetriantbosson.ch", "non", "http://www.vet-chene-bougeries.ch", "non", "non", "https://vetbernex.ch/", "http://www.bestiaire.ch", "non", "https://vet-collonge-bellerive.ch/", "non", "http://www.veto-psy.ch", "http://www.vettravel.info", "https://www.vetchampel.ch/", "non", "http://www.vet-villereuse.ch", "non", "http://www.terkuile.tk", "https://www.cabinetveterinairedesacacias.com/")
+        )
+>>>>>>> Stashed changes
         
-        popup_content <- paste0("<b>", name, "</b><br>",
-                                "Avis : ", rating, "/5<br>",
-                                "Lieu : ", place, "<br>",
-                                "Adresse : ", address, "<br>",
-                                "Téléphone : ", phone, "<br>",
-                                "Site internet : ", website, "<br>")
+        # Créer une carte centrée sur Genève
+        geneva_map <- leaflet() %>%
+          setView(lng = 6.1432, lat = 46.2044, zoom = 12) %>%
+          addTiles()
         
-        geneva_map <- geneva_map %>%
-          addMarkers(lng = longitude, lat = latitude, popup = popup_content)
-      }
-      
-      # Afficher la carte
-      geneva_map
+        # Ajouter les marqueurs de vétérinaires avec informations supplémentaires
+        for (i in 1:nrow(veterinaries)) {
+          name <- veterinaries$name[i]
+          place <- veterinaries$place[i]
+          rating <- veterinaries$rating[i]
+          address <- veterinaries$address[i]
+          latitude <- veterinaries$latitude[i]
+          longitude <- veterinaries$longitude[i]
+          phone <- veterinaries$phone[i]
+          website <- veterinaries$website[i]
+          
+          popup_content <- paste0("<b>", name, "</b><br>",
+                                  "Avis : ", rating, "/5<br>",
+                                  "Lieu : ", place, "<br>",
+                                  "Adresse : ", address, "<br>",
+                                  "Téléphone : ", phone, "<br>",
+                                  "Site internet : ", website, "<br>")
+          
+          geneva_map <- geneva_map %>%
+            addMarkers(lng = longitude, lat = latitude, popup = popup_content)
+        }
+        
+        # Afficher la carte
+        geneva_map
     })
   }
   
