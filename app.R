@@ -44,7 +44,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                        style = "text-align: justify;",
                                        h3("Welcome to our web application, your ultimate destination for everything cat-related.", style = "color:orange"),
                                        br(),
-                                       p("Whether you're a proud cat owner, a cat enthusiast, or someone looking to learn more about these fascinating creatures, you've come to the right place."),
+                                       p("Whether you're a proud cat owner, a cat enthusiast, or someone looking to learn more about these fascinating creatures, you've come to the right place. CatChooser.com has many features you can use!"),
                                        br(),
                                        p("Our application is designed to provide you with a comprehensive experience when it comes to cat knowledge, veterinary services, and information about different cat breeds. Whether you're seeking advice on daily care, health, nutrition, or cat behavior, our application is filled with reliable resources and informative content written by experts."),
                                        br(),
@@ -80,12 +80,54 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             #Vets near me tab!
                             tabPanel("Vetenarians Near Me", 
                                      h3("This is where you can find local vets in your area!", style = "color:orange"),
+                                     br(),
+                                     p("Below you will find a map with the locations of various vetenarians in the Geneva area. If you want to know more about a specific location, click on the icon and it will display the information about that particular vetenarian. The information will be a general rating out of 5, the name of the cabinet, the address, the telephone numbers and the website link if one exists."),
+                                     br(),
                                      leafletOutput("map")),
                             #Adoptions Centers
                             tabPanel("Adoption Centers Near Me", h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange")),
                             
                             #Random Cat Facts
-                            tabPanel("Random Cat Facts", h3("Here are some random cat facts you may find very interesting!", style = "color:orange"),),
+                            tabPanel("About Cats", h3("Interested in knowing more about cats, their history and more? You're in the right place!", style = "color:orange"),
+                                     br(),
+                                     h4(strong("The History of Cats : ")),
+                                     p("The relationship between humans and cats started around 10'000 years ago, in the Fertile Crescent where agriculture attracted rodents. This prompted wild cats or 'felix silvestris lybica' to go to the farms to hunt for this now abundant food supply. Thus the mutually benefitial relationship between humans and cats begun. Cats have been domesticated for thousands of years, with the earliest evidence of domesticated cats dating back to ancient Egypt around 4,000 years ago. In ancient Egypt, cats were highly revered and even worshipped, with the goddess Bastet depicted as a woman with the head of a cat. Cats were also seen as protectors of crops and were often kept in households to catch rodents and other pests. From Egypt, the domestication of cats spread to other parts of the world, including Europe and Asia. Cats were often kept on ships to control rat populations, which helped to prevent the spread of disease."),
+                                     br(),
+                                     img(src = "ancient-egypt.jpg", height = 160, width = 160, align = 'right'), 
+                                     br(),
+                                     p("In the Middle Ages, cats were often associated with witchcraft and were persecuted along with their human counterparts. However, during the Renaissance, cats regained their popularity as pets and were often depicted in art and literature. Today, cats are one of the most popular pets in the world, with an estimated 95 million domestic cats in the United States alone. They are known for their independent nature, playful personalities, and ability to provide comfort and companionship to their owners."),
+                                     br(),
+                                     h4(strong("The Feline Family : ")),
+                                     p("The feline family, also known as Felidae, is a diverse group of carnivorous mammals that includes domestic cats, lions, tigers, cheetahs, leopards, jaguars, and many others. They are known for their sleek bodies, sharp claws, and keen senses, which make them skilled hunters and predators. Felines are found all over the world, from the African savannah to the forests of Asia and the Americas. They are solitary creatures and are typically active at night, using their excellent night vision to hunt for prey. The feline family is one of the most popular and beloved groups of animals, with domestic cats being one of the most common pets worldwide."),
+                                     br(),
+                                     img(src = "feline-family.jpg", height = 450, width = 300, align = 'center'),
+                                     br(),
+                                     h4(strong("Some Fun Facts about Cats :")),
+                                     p("- Just like humans, cats can be either right- or left-handed (right- or left-pawed, we suppose). Also just like in humans, females tend to be right-handed, while lefties are predominantly male."),
+                                     br(),
+                                     p("- Yawning is a behavior that cats use to defuse tense situations. A cat that yawns is signaling to others that they wish to be done with the current interaction. Interestingly enough, that’s exactly what yawning signals in humans too, except it’s seen as way more aggressive when we do it."),
+                                     br(),
+                                     p("- In Scotland, there’s a tower commemorating a cat named Towser. All Towser did was catch 30,000 mice in her lifetime, undoubtedly saving people from countless diseases as a result."),
+                                     br(),
+                                     p("- All species of cats are capable of getting high on catnip, including big cats like lions, tigers, and leopards. After all, there’s nothing safer than having a hallucinating tiger running around."),
+                                     br(),
+                                     p("- Around 5% of cat owners hold birthday parties for their cats, and 47% of cat owners take pictures of their cats almost every day."),
+                                     br(),
+                                     p("- Cats are notoriously picky eaters — so much so, they’ll refuse a food that they don’t like to the point of starving to death. If your cat isn’t a fan of their new kibble, don’t try to wait them out because you might be waiting a long time indeed."),
+                                     br(),
+                                     p("- Cats can only move their jaws up and down, not sideways. As a result, they can’t chew large chunks of food. If you’re sharing scraps with your cat (and you really shouldn’t be), then make sure that the pieces are small enough for them to munch on easily."),
+                                     br(),
+                                     p("- It’s totally normal for cats to sleep as much as 20 hours a day. The only time that you should be concerned about your cat’s sleep is if it changes from its normal pattern. Cats who sleep much more than usual could be ill or depressed, and those who sleep less than usual may also be ill."),
+                                     br(),
+                                     p("- Felines don’t have collarbones, which is why they can squeeze through any opening that’s at least as big as their head."),
+                                     br(),
+                                     p("- There are over 200 cats that have a better job than you do. That’s right, they work at Disneyland! Their job is to catch and eat any rodents that may show up, helping to keep the park clean."),
+                                     br(),
+                                     p("- There have been several famous cat haters throughout history, including the likes of Genghis Khan, Napoleon Bonaparte, and of course, Adolf Hitler."),
+                                     br(),
+                                     p("- There’s a dispute as to exactly how many breeds of housecats there are. The International Cat Association recognizes 71 individual breeds, while the Cat Fanciers’ Association only recognizes 44."),
+                                     br(),
+                                     h3(strong("Thank you for reading!"), align = 'center')),
                             
                             #About us 
                             tabPanel("About Us",
@@ -130,7 +172,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                                  h3("Karl Myers"),
                                                  img(src = "karl-mayers Petite.jpeg", class = "img-responsive"),
                                                  h4("Operation Manager :"),
-                                                 p("Karl oversees and manages day-to-day operations, ensuring efficient processes, resource allocation, and timely execution of projects. He is responsible for optimizing productivity, streamlining workflows, and achieving operational objectives. It demand strong organizational, problem-solving, and leadership skills."),
+                                                 p("Karl oversees and manages day-to-day operations, ensuring efficient processes, resource allocation, and timely execution of projects. He is responsible for optimizing productivity, streamlining workflows, and achieving operational objectives. It demand strong organizational, problem-solving, and leadership skills. He is also the proud owner of 4 wonderful cats."),
                                                  h4("Contacts :"),
                                                  p(a("Email : karl.myers@etu.unige.ch", href ="mailto:karl.myers@etu.unige.ch")),
                                                  p(a("Téléphone : +41 78 711 50 00", href = "tel:+41 78 711 50 00"))
@@ -597,15 +639,32 @@ server <- function(input, output) {
         br(),
         br(),
         "If you are interested and want to learn more about the wonderful Siamese cat, please check out the following link : ",
-        a("The Cat Fanciers' Association : Siamese Cat", href = "https://cfa.org/siamese")
-        )
-      
-      
-      
-    }
-    
-    
-  })
+        a("The Cat Fanciers' Association : Siamese Cat", href = "https://cfa.org/siamese"))
+    } else if (input$catbreeds == "Sphynx"){
+       p(style = "text-align : justify;", 
+         "Without a doubt one of the more unique cat breeds, the Sphynx is named that way after the Ancient Egyptian sphynx. They are most striking because of their lack of fur but they do have some fur, like we humans have on our faces (peach fuzz). Funnily enough, they actually originated in Canada sometime in the 1960s. They don't really have a fur color and their eyes can be any feline eye color.",
+         br(),
+         br(),
+         "The Sphynx cat can live to be between 8 and 14 years old. They can get to be around 5 and a half kilos in weight and can get around 40 cm long. They are not hypoallergenic despite not having any 'real' fur. They are actually quite affectionate and love the heat, making them good cuddlers. They really like snuggling under blankets where its warm. The averge Sphynx can cost you around CHF1'500 up to CHF3'000.",
+         br(),
+         br(),
+         h4("Health Issues : "),
+         "The Sphynx has a rather unique set of problems owners need to deal with on top of the usual hypertrophic cardiomyopathy.",
+         br(),
+         br(),
+         "Due to their lack of fur, Sphynxes are best as indoor cats since they will get sunburnt if exposed to the sunlight for too long. In fact, it is probably worse for them than for humans.",
+         br(),
+         br(),
+         "Urticaria pigmentosa : This is an itchy, hereditary skin condition that causes a rash.",
+         br(),
+         br(),
+         "Periodontal disease or gum disorders.",
+         br(),
+         br(),
+         "If you want to learn more about the Sphynx cat, please consult the following link : ",
+         a("The Cat Fanciers' Association : Sphynx Cat", href = "https://cfa.org/sphynx")) 
+        }
+     })
   
   
   #Map of Geneva's veterinarians
@@ -618,53 +677,53 @@ server <- function(input, output) {
   )
   
   # Définir le serveur de l'application Shiny
-    output$map <- renderLeaflet({
+  output$map <- renderLeaflet({
+    
+    # Exemple de données de vétérinaires
+    veterinaries <- data.frame(
+      name = c("AMACKER Véronique", "AMBERGER Christophe, PHILIP Laurence", "BORER Luc, BORER-GERMANN Stéphanie, BRIZARD Delphine, FOELLMI Jérôme", "BOSSHART Marc-Antoine, DAYER Geneviève", "CAMPBELL Robert", "CAPOZZI Alessandro", "CARQUILLAT Delphine, LUKA Gabor", "CASELLINI Martine", "CATHENOZ Yold-Lin, CHAPUS MICHAUD Amélie, PIALAT Dahlia", "GELEHRTER Mira", "GOTTLIEBEROVA Elena, PORCHET Marie-José", "GUERNE Alain, UEBERSAX Wolfgang", "HUGI Doris", "LAMBRIGGER Nadine", "LA NAIA Vincenzo", "LAURENT Sentha", "LEGRUM Mariam, VOUILLON Tanguy", "LUKA Pia", "MAILLARD VERHAGEN Ariane", "NEAGU Andrea", "PAPADOPOULOS Konstantinos, ZOTOU Natacha", "PEREZ ROMO Federico", "RITTER Corinne", "SPYCHER Rodolphe", "TER KUILE Pierre", "TORRES Alejandro"),
+      place = c("Service à domicile", "Cabinet Vétérinaire et Centre d'Imagerie", "VetSpécialistes", "Cabinet vétérinaire des Sources", "Cabinet vétérinaire de Saint-Jean", "Cabinet vétérinaire du Clos de la Fonderie", "Cabinet vétérinaire de Vésenaz", "Cabinet vétérinaire de Caroll", "Cabinet vétérinaire de Riantbosson", "Cabinet vétérinaire de la Jonction", "Cabinet vétérinaire de Chêne-Bougeries", "Cabinet vétérinaire des Tuileries", "Cabinet vétérinaire des Deux-Communes", "Cabinet Vétérinaire de Bernex", "Cabinet vétérinaire Bestiaire du Rhône", "Cabinet vétérinaire des Promenades", "Cabinet vétérinaire de Collonge-Bellerive", "Cabinet vétérinaire des Hauts de Carouge", "Veto-Psy - vétérinaire comportementaliste", "VetTravel", "Cabinet vétérinaire de Champel", "Cabinet vétérinaire de la Versoix", "Cabinet vétérinaire de Villereuse", "Cabinet vétérinaire de Frontenex", "Cabinet vétérinaire des Pontets", "Cabinet vétérinaire des Acacias"),
+      rating = c(5, 3.8, 4.5, 4.5, 4.3, 4.8, 4.2, 4.3, 4.6, 3.4, 4.7, 4.7, 4.6, 4.7, 4.9, 4.9, 4.7, 4.7, 4.3, 4.7, 4.8, 4, 4.2, 4.3, 4.1, 4.8),
+      address = c("Route de Laconnex 100, 1287 Laconnex", "Rue de la Servette 96, 1202 Genève", "Rte de Ferney 194B, 1218 Grand-Saconnex", "Rue des Sources 10, 1205 Genève", "Rue de Saint-Jean 28, 1203 Genève", "Clos-de-la-Fonderie 23, 1227 Carouge", "Route d'Hermance 8, 1222 Vésenaz", "Chemin de la Caroline 18a, 1213 Petit-Lancy", "Chemin de Riantbosson 5, 1217 Meyrin", "38 Boulevard Carl-Vogt, 1205 Genève", "Rue de Chêne-Bougeries 31, 1224 Chêne-Bougeries", "Chemin des Tuileries 42, 1293 Bellevue", "Chemin des Deux-Communes 21, 1226 Thônex", "Chemin de la Distillerie 12, 1233 Bernex", "Chemin du 23-Août 4, 1205 Genève", "Boulevard des Promenades 22, 1227 Carouge", "Route d'Hermance 95, 1245 Collonge-Bellerive", "Route de Saint-Julien 19, 1227 Carouge", "Rue de la Coupe Gordon-Bennett 2, 1219 Aïre", "Coupe Gordon-Bennett 2, 1219 Le Lignon", "Rue Pedro-Meylan 1, 1208 Genève", "Rampe de la Gare 6, 1290 Versoix", "Rue de Villereuse 7, 1207 Genève", "Rue Viollier 10, 1207 Genève", "Case Postale 582, 1212 Grand-Lancy", "Rte des Acacias 18, 1227 Les Acacias"),
+      latitude = c(46.1630375, 46.2133737, 46.2351041, 46.195877, 46.2043452, 46.1858175, 46.240613, 46.191012, 46.226302, 46.198451, 46.196273, 46.252776, 46.194043, 46.177563, 46.202942, 46.1820537, 46.252583, 46.1767047, 46.205218, 46.205145, 46.195716, 46.279749, 46.199889, 46.201207, 46.173957, 46.191710),
+      longitude = c(6.0422094, 6.128216, 6.1223517, 6.144583, 6.1281351, 6.1458293, 6.198072, 6.108927, 6.083383, 6.134992, 6.190887, 6.143145, 6.201620, 6.077023, 6.134026, 6.1374464, 6.203052, 6.1335575, 6.103946, 6.104021, 6.163799, 6.166744, 6.158398, 6.164067, 6.123575, 6.136614),
+      phone = c("079 341 47 72", "022 734 42 48", "022 708 11 33", "022 708 11 99", "022 340 27 27", "022 342 74 00", "022 752 67 67", "022 792 12 05", "022 719 10 10", "022 995 96 97", "022 349 63 33", "022 774 25 25", "022 348 58 00", "022 757 61 18", "022 320 43 43", "022 343 30 80", "022 752 34 11", "022 343 22 22", "079 154 35 79", "079 120 65 12", "022 736 00 06", "022 755 46 24", "022 736 44 00", "022 840 08 68", "022 884 18 28", "022 342 45 46"),
+      website = c("non", "http://www.imavet.ch", "https://vetspecialistes.ch/", "non", "http://veto-stjean.ch", "http://www.veterinaire-carouge.com", "http://www.vetvesenaz.ch", "non", "http://www.vetriantbosson.ch", "non", "http://www.vet-chene-bougeries.ch", "non", "non", "https://vetbernex.ch/", "http://www.bestiaire.ch", "non", "https://vet-collonge-bellerive.ch/", "non", "http://www.veto-psy.ch", "http://www.vettravel.info", "https://www.vetchampel.ch/", "non", "http://www.vet-villereuse.ch", "non", "http://www.terkuile.tk", "https://www.cabinetveterinairedesacacias.com/")
+    )
+    
+    # Créer une carte centrée sur Genève
+    geneva_map <- leaflet() %>%
+      setView(lng = 6.1432, lat = 46.2044, zoom = 12) %>%
+      addTiles()
+    
+    # Ajouter les marqueurs de vétérinaires avec informations supplémentaires
+    for (i in 1:nrow(veterinaries)) {
+      name <- veterinaries$name[i]
+      place <- veterinaries$place[i]
+      rating <- veterinaries$rating[i]
+      address <- veterinaries$address[i]
+      latitude <- veterinaries$latitude[i]
+      longitude <- veterinaries$longitude[i]
+      phone <- veterinaries$phone[i]
+      website <- veterinaries$website[i]
       
-      # Exemple de données de vétérinaires
-      veterinaries <- data.frame(
-        name = c("AMACKER Véronique", "AMBERGER Christophe, PHILIP Laurence", "BORER Luc, BORER-GERMANN Stéphanie, BRIZARD Delphine, FOELLMI Jérôme", "BOSSHART Marc-Antoine, DAYER Geneviève", "CAMPBELL Robert", "CAPOZZI Alessandro", "CARQUILLAT Delphine, LUKA Gabor", "CASELLINI Martine", "CATHENOZ Yold-Lin, CHAPUS MICHAUD Amélie, PIALAT Dahlia", "GELEHRTER Mira", "GOTTLIEBEROVA Elena, PORCHET Marie-José", "GUERNE Alain, UEBERSAX Wolfgang", "HUGI Doris", "LAMBRIGGER Nadine", "LA NAIA Vincenzo", "LAURENT Sentha", "LEGRUM Mariam, VOUILLON Tanguy", "LUKA Pia", "MAILLARD VERHAGEN Ariane", "NEAGU Andrea", "PAPADOPOULOS Konstantinos, ZOTOU Natacha", "PEREZ ROMO Federico", "RITTER Corinne", "SPYCHER Rodolphe", "TER KUILE Pierre", "TORRES Alejandro"),
-        place = c("Service à domicile", "Cabinet Vétérinaire et Centre d'Imagerie", "VetSpécialistes", "Cabinet vétérinaire des Sources", "Cabinet vétérinaire de Saint-Jean", "Cabinet vétérinaire du Clos de la Fonderie", "Cabinet vétérinaire de Vésenaz", "Cabinet vétérinaire de Caroll", "Cabinet vétérinaire de Riantbosson", "Cabinet vétérinaire de la Jonction", "Cabinet vétérinaire de Chêne-Bougeries", "Cabinet vétérinaire des Tuileries", "Cabinet vétérinaire des Deux-Communes", "Cabinet Vétérinaire de Bernex", "Cabinet vétérinaire Bestiaire du Rhône", "Cabinet vétérinaire des Promenades", "Cabinet vétérinaire de Collonge-Bellerive", "Cabinet vétérinaire des Hauts de Carouge", "Veto-Psy - vétérinaire comportementaliste", "VetTravel", "Cabinet vétérinaire de Champel", "Cabinet vétérinaire de la Versoix", "Cabinet vétérinaire de Villereuse", "Cabinet vétérinaire de Frontenex", "Cabinet vétérinaire des Pontets", "Cabinet vétérinaire des Acacias"),
-        rating = c(5, 3.8, 4.5, 4.5, 4.3, 4.8, 4.2, 4.3, 4.6, 3.4, 4.7, 4.7, 4.6, 4.7, 4.9, 4.9, 4.7, 4.7, 4.3, 4.7, 4.8, 4, 4.2, 4.3, 4.1, 4.8),
-        address = c("Route de Laconnex 100, 1287 Laconnex", "Rue de la Servette 96, 1202 Genève", "Rte de Ferney 194B, 1218 Grand-Saconnex", "Rue des Sources 10, 1205 Genève", "Rue de Saint-Jean 28, 1203 Genève", "Clos-de-la-Fonderie 23, 1227 Carouge", "Route d'Hermance 8, 1222 Vésenaz", "Chemin de la Caroline 18a, 1213 Petit-Lancy", "Chemin de Riantbosson 5, 1217 Meyrin", "38 Boulevard Carl-Vogt, 1205 Genève", "Rue de Chêne-Bougeries 31, 1224 Chêne-Bougeries", "Chemin des Tuileries 42, 1293 Bellevue", "Chemin des Deux-Communes 21, 1226 Thônex", "Chemin de la Distillerie 12, 1233 Bernex", "Chemin du 23-Août 4, 1205 Genève", "Boulevard des Promenades 22, 1227 Carouge", "Route d'Hermance 95, 1245 Collonge-Bellerive", "Route de Saint-Julien 19, 1227 Carouge", "Rue de la Coupe Gordon-Bennett 2, 1219 Aïre", "Coupe Gordon-Bennett 2, 1219 Le Lignon", "Rue Pedro-Meylan 1, 1208 Genève", "Rampe de la Gare 6, 1290 Versoix", "Rue de Villereuse 7, 1207 Genève", "Rue Viollier 10, 1207 Genève", "Case Postale 582, 1212 Grand-Lancy", "Rte des Acacias 18, 1227 Les Acacias"),
-        latitude = c(46.1630375, 46.2133737, 46.2351041, 46.195877, 46.2043452, 46.1858175, 46.240613, 46.191012, 46.226302, 46.198451, 46.196273, 46.252776, 46.194043, 46.177563, 46.202942, 46.1820537, 46.252583, 46.1767047, 46.205218, 46.205145, 46.195716, 46.279749, 46.199889, 46.201207, 46.173957, 46.191710),
-        longitude = c(6.0422094, 6.128216, 6.1223517, 6.144583, 6.1281351, 6.1458293, 6.198072, 6.108927, 6.083383, 6.134992, 6.190887, 6.143145, 6.201620, 6.077023, 6.134026, 6.1374464, 6.203052, 6.1335575, 6.103946, 6.104021, 6.163799, 6.166744, 6.158398, 6.164067, 6.123575, 6.136614),
-        phone = c("079 341 47 72", "022 734 42 48", "022 708 11 33", "022 708 11 99", "022 340 27 27", "022 342 74 00", "022 752 67 67", "022 792 12 05", "022 719 10 10", "022 995 96 97", "022 349 63 33", "022 774 25 25", "022 348 58 00", "022 757 61 18", "022 320 43 43", "022 343 30 80", "022 752 34 11", "022 343 22 22", "079 154 35 79", "079 120 65 12", "022 736 00 06", "022 755 46 24", "022 736 44 00", "022 840 08 68", "022 884 18 28", "022 342 45 46"),
-        website = c("non", "http://www.imavet.ch", "https://vetspecialistes.ch/", "non", "http://veto-stjean.ch", "http://www.veterinaire-carouge.com", "http://www.vetvesenaz.ch", "non", "http://www.vetriantbosson.ch", "non", "http://www.vet-chene-bougeries.ch", "non", "non", "https://vetbernex.ch/", "http://www.bestiaire.ch", "non", "https://vet-collonge-bellerive.ch/", "non", "http://www.veto-psy.ch", "http://www.vettravel.info", "https://www.vetchampel.ch/", "non", "http://www.vet-villereuse.ch", "non", "http://www.terkuile.tk", "https://www.cabinetveterinairedesacacias.com/")
-      )
+      popup_content <- paste0("<b>", name, "</b><br>",
+                              "Avis : ", rating, "/5<br>",
+                              "Lieu : ", place, "<br>",
+                              "Adresse : ", address, "<br>",
+                              "Téléphone : ", phone, "<br>",
+                              "Site internet : ", website, "<br>")
       
-      # Créer une carte centrée sur Genève
-      geneva_map <- leaflet() %>%
-        setView(lng = 6.1432, lat = 46.2044, zoom = 12) %>%
-        addTiles()
-      
-      # Ajouter les marqueurs de vétérinaires avec informations supplémentaires
-      for (i in 1:nrow(veterinaries)) {
-        name <- veterinaries$name[i]
-        place <- veterinaries$place[i]
-        rating <- veterinaries$rating[i]
-        address <- veterinaries$address[i]
-        latitude <- veterinaries$latitude[i]
-        longitude <- veterinaries$longitude[i]
-        phone <- veterinaries$phone[i]
-        website <- veterinaries$website[i]
-        
-        popup_content <- paste0("<b>", name, "</b><br>",
-                                "Avis : ", rating, "/5<br>",
-                                "Lieu : ", place, "<br>",
-                                "Adresse : ", address, "<br>",
-                                "Téléphone : ", phone, "<br>",
-                                "Site internet : ", website, "<br>")
-        
-        geneva_map <- geneva_map %>%
-          addMarkers(lng = longitude, lat = latitude, popup = popup_content)
-      }
-      
-      # Afficher la carte
-      geneva_map
-    })
-  }
-  
-  
+      geneva_map <- geneva_map %>%
+        addMarkers(lng = longitude, lat = latitude, popup = popup_content)
+    }
+    
+    # Afficher la carte
+    geneva_map
+  })
+}
+
+
 
 
 # Run the application 
