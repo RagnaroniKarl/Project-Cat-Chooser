@@ -244,7 +244,7 @@ server <- function(input, output) {
       
     } else if (input$catbreeds == "Himalayan") {
       
-      img(height = 200, width = 300, src = "himalayan.jpg")
+      img(height = 300, width = 300, src = "himalayan.jpg")
       
     } else if (input$catbreeds == "Maine Coon") {
       
@@ -252,7 +252,7 @@ server <- function(input, output) {
       
     } else if (input$catbreeds == "Norwegian Forest") {
       
-      img(height = 200, width = 300, src = "kitten-adoption.jpg")
+      img(height = 200, width = 300, src = "karl-ragnar.jpg")
       
     } else if (input$catbreeds == "Persian") {
       
@@ -272,7 +272,7 @@ server <- function(input, output) {
       
     } else if (input$catbreeds == "Siamese") {
       
-      img(height = 200, width = 300, src = "kitten-adoption.jpg")
+      img(height = 250, width = 350, src = "karl-tiggy-2.jpg")
       
     } else if (input$catbreeds == "Sphynx") {
       
@@ -548,7 +548,9 @@ server <- function(input, output) {
         br(),
         br(),
         "If you're interested in learning more about Norwegian Forest cats, please click on the link below : ",
-        a("The Cat Fanciers' Association : Norwegian Forest", href = "https://cfa.org/norwegian-forest-cat/norwegian-forest-cat-article/"))
+        a("The Cat Fanciers' Association : Norwegian Forest", href = "https://cfa.org/norwegian-forest-cat/norwegian-forest-cat-article/"),
+        br(),
+        h5("This is one of Karl's cats : Ragnar!", style = "color:red"),) 
     } else if (input$catbreeds == "Persian"){
       p(style = "text-align : justify;",
         "One of the most iconic breeds of all time, Persians have been around for thousands of years, tracing back its heritage to ancient Persia (modern day Iran). It is recognizable by its round, flat face and its large coat of fur. Just about any cat color possible can be found found in a Persian, including the Siamese looks. As for their eye colors, they can be found in gold, green, blue, hazel or even a red color. It is currently the most pedigreed cat in the United States and large parts of the world.", 
@@ -639,7 +641,8 @@ server <- function(input, output) {
         br(),
         br(),
         "If you are interested and want to learn more about the wonderful Siamese cat, please check out the following link : ",
-        a("The Cat Fanciers' Association : Siamese Cat", href = "https://cfa.org/siamese"))
+        a("The Cat Fanciers' Association : Siamese Cat", href = "https://cfa.org/siamese"),
+        h5("This is one of Karl's cats : Tiggy!", style = "color:red"),)
     } else if (input$catbreeds == "Sphynx"){
        p(style = "text-align : justify;", 
          "Without a doubt one of the more unique cat breeds, the Sphynx is named that way after the Ancient Egyptian sphynx. They are most striking because of their lack of fur but they do have some fur, like we humans have on our faces (peach fuzz). Funnily enough, they actually originated in Canada sometime in the 1960s. They don't really have a fur color and their eyes can be any feline eye color.",
