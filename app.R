@@ -73,7 +73,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                                  choices = c("         ", "Abyssinian", "American Bobtail", "American Shorthair", "Balinese", "Bengal", "Bombay", "British Shorthair", "Devon Rex", "Exotic Shorthair", "Himalayan", "Maine Coon", "Norwegian Forest", "Persian", "Ragdoll", "Savannah", "Scottish Fold", "Siamese", "Sphynx"), selected = "         "),
                                      textOutput("selected_catbreeds"),
                                      br(),
-                                     uiOutput(("catbreedimage")), 
+                                     uiOutput("catbreedimage"), 
                                      br(),
                                      uiOutput("catbreedinfo"),
                             ),
@@ -81,7 +81,6 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             tabPanel("Vetenarians Near Me", 
                                      h3("This is where you can find local vets in your area!", style = "color:orange"),
                                      leafletOutput("map")),
-                            
                             #Adoptions Centers
                             tabPanel("Adoption Centers Near Me", h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange")),
                             
@@ -118,7 +117,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                              # Colonne 1
                                              div(class = "col-md-4",
                                                  h3("Nelson Chikuru"),
-                                                 img(src = "nelson-chikuru Petite.jpeg", class = "img-responsive"),
+                                                 img(src = "nelson-chikuru petite.jpeg", class = "img-responsive"),
                                                  h4("Marketing Manager:"),
                                                  p("Nelson develops and implements effective marketing strategies, manages campaigns, conducts market research, and oversees brand management. Nelson collaborates with internal teams and external partners for seamless coordination. It requires market knowledge, project management skills, and creative thinking."),
                                                  h4("Contacts :"),
@@ -490,6 +489,73 @@ server <- function(input, output) {
         br(),
         "If you're interested in learning more about the Maine Coon, please check out the following site : ",
         a("The Cat Fanciers' Association : Maine Coon", href = "https://cfa.org/maine-coon-cat/"))
+    }else if (input$catbreeds == "Norwegian Forest"){
+      p(style = "text-align : justify;",
+        "The Norwegian Forest cat is a breed that developed on its own to adapt to the freezing climate of the forests of Norway, which is where it gets its name from. They have long silky fur, lynx-like ears and 'toe feathers' to keep their paws warm in winter or in the snow. They can be found in most colors barring Siamese type colors and patterns. The same can be said about their eye color, the only important difference is that only white or partially white Norwegian Forest cats have blue eyes, the rest cannot.", 
+        br(),
+        br(),
+        "When it goes to life expectancy, the Norwegian Forest cat, if well-taken care of, can live up to 16 years old. They can be quite large, heavy cats, weighing up to 8 kilos and as long as almost a meter head to tail. They form strong bonds with their families and are wonderful family cats as they tend to be very friendly, not noisy and go well with little kids and pets. They are not hypoallergenic. The average Norwegian Forest cat can cost you from CHF800 to CHF1'500.",
+        h4("Health Issues : "),
+        "The Norwegian Forest cat is prone to a few health problems, including the typical for cats hypertrophic cardiomyopathy :",
+        br(),
+        br(),
+        "Hip dysplasia : This is the looseness of the hip joint, while this is uncommon in cats, it does affect some of the larger breeds like Norwegian Forests and Maine Coons.",
+        br(),
+        br(),
+        "Glycogen storage disease type IV is caused by a defective enzyme and leads to organ dysfunction, muscle atrophy and death.",
+        br(),
+        br(),
+        "If you're interested in learning more about Norwegian Forest cats, please click on the link below : ",
+        a("The Cat Fanciers' Association : Norwegian Forest", href = "https://cfa.org/norwegian-forest-cat/norwegian-forest-cat-article/"))
+    } else if (input$catbreeds == "Persian"){
+      p(style = "text-align : justify;",
+        "One of the most iconic breeds of all time, Persians have been around for thousands of years, tracing back its heritage to ancient Persia (modern day Iran). It is recognizable by its round, flat face and its large coat of fur. Just about any cat color possible can be found found in a Persian, including the Siamese looks. As for their eye colors, they can be found in gold, green, blue, hazel or even a red color. It is currently the most pedigreed cat in the United States and large parts of the world.", 
+        br(),
+        br(),
+        "A healthy, well-taken care of Persian can live anywhere between 15 to 20 years of age. Their average weight is between 3 to 5 kilos and their average length is between 35 to 43 cm. They are cuddly, affectionate cats that are rather high maintenance because of their long fur coat. They are surprisingly not hypoallergenic. They are not always the best with little kids or other pets. The average Persian cat will cost you anywhere between CHF500 to CHF5'000",
+        h4("Health Issues : "),
+        " The Persian cat is prone to quite a few genetic disorders as well as hypertrophic cardiomyopathy :",
+        br(),
+        br(),
+        "Progressive Retinal Atrophy : This is an inherited eye disorder that can lead to blindness in your cat", 
+        br(),
+        br(),
+        "Polycstic Kidney Disease : The kidneys will be enlarged and will not function properly. Cysts are typically seen in affected cats by their first year alive. This can lead to kidney failure.",
+        br(),
+        br(),
+        "Respiratory Issues due to their flattened faces, they can have trouble breathing, especially in warm, humid climates. Air-conditioning will make it easier for them.",
+        "If you're interested in learning more about Persian cats, please click on the link below : ",
+        a("The Cat Fanciers' Association : Persians ", href = "https://cfa.org/persian/"))
+    } else if (input$catbreeds == "Ragdoll"){
+      p(style = "text-align : justify;",
+        "The Ragdoll cat is a unique cat for one of its traits. They go limp with pleasure when you pet them which is where they get their namesake from. It is one of the larger breeds of cats out there. They can look somewhat like a mix between Siamese and Persians, showing such colors as chocolate, red, seal, blue and cream. They only have blue eyes. Another cat 'developed' in the United States during the Post War Period, a breeder wanted to make a beautiful cat with a loving personality.",
+        br(),
+        br(),
+        "The Ragdoll can live to be around 17 years old. They are on the larger end of cat breeds, weighing up to 9 kilos and measuring up to a meter in length, head to tail. They are not hypoallergenic cats. They make the perfect family cat, they love being cuddled and are very social and outgoing cats. A Ragdoll cat can cost you between CHF800 to CHF2'000",
+        h4("Health Issues : "),
+        "The Ragdoll is prone to most of the common cat health conditions like hypertrophic cardiomyopathy, weight issues and other such things but nothing specific to the breed",
+        br(),
+        br(), 
+        "If you want to learn more about the Ragdoll cat, please feel free to click the link below : ",
+        a("The Cat Fanciers' Association : Ragdoll cats", href = "https://cfa.org/ragdoll/"))
+    } else if (input$catbreeds == "Savannah"){
+      p(style = "text-align : justify;",
+        "The Savannah cat is a breed created by mixing a regular domestic cat with a wild African Serval. The name originates from the place of origin of the Serval, the African Savannah. This breed is one of the newest breeds to be created, that being around the early 1980s. The cat looks very much like its wild brethen the Serval with a black/brown spotted tabby pattern (see image). Its eyes will be either amber or green.",
+        br(),
+        br(),
+        "The Savannah cat can live to be around 20 years old in captivity and under good care. They can weigh anywhere between 5 and 11 kilos (depending on the generation of Savannah cat). Similarily they can measure between 50 and 55 cm depending on the generation. It is not hypoallergenic and is generally friendly however please see the warning after this part.",
+        br(),
+        br(),
+        h4("Warning about the Savannah cat : "),
+        "Instead of talking about their health, which is generally pretty good, we will talk about issues with owning a Savannah cat. In many juristrictions, it is illegal to own a Savannah cat due to its hybrid (and wild) ancestry. In places where you are allowed to own one, you may need a permit to own the Savannah cat. Since it is hybrid with a wild animal we recommend that you buy a kitten from a breeder that has made sure that the kitten is properly socialized with humans, pets and other such things.",
+        br(),
+        br(),
+        "If you want to learn more about the elusive Savannah cat, please have a look at the site provided below (please note that the Cat Fanciers' Association does not have a page on the Savannah due to it not being a recognized breed yet) :  ",
+        a("Wikipedia : Savannah Cat", href = "https://en.wikipedia.org/wiki/Savannah_cat"))
+      
+      
+      
+      
     }
     
     
@@ -506,7 +572,6 @@ server <- function(input, output) {
   )
   
   # Définir le serveur de l'application Shiny
-  server <- function(input, output) {
     output$map <- renderLeaflet({
       
       # Exemple de données de vétérinaires
@@ -554,7 +619,7 @@ server <- function(input, output) {
   }
   
   
-}
+
 
 # Run the application 
 shinyApp(ui = ui, server = server)
