@@ -84,8 +84,14 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      p("Below you will find a map with the locations of various vetenarians in the Geneva area. If you want to know more about a specific location, click on the icon and it will display the information about that particular vetenarian. The information will be a general rating out of 5, the name of the cabinet, the address, the telephone numbers and the website link if one exists."),
                                      br(),
                                      leafletOutput("map")),
+                            
                             #Adoptions Centers
-                            tabPanel("Adoption Centers Near Me", h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange")),
+                            tabPanel("Adoption Centers Near Me", 
+                                     h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange")),
+                                     br(),
+                                     p("Presented below is a map highlighting the locations of several adoption centers in and around the Geneva area. By clicking on the respective icon, you can access detailed information about each adoption center, including the center's name, address, telephone numbers, their general rating out of 5, and a provided website link."),
+                                     br(),
+                                     leafletOutput("map")),
                             
                             #Random Cat Facts
                             tabPanel("About Cats", h3("Interested in knowing more about cats, their history and more? You're in the right place!", style = "color:orange"),
@@ -193,8 +199,6 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             )
                 )
 )
-
-
 
 # )
 #)
@@ -711,11 +715,11 @@ server <- function(input, output) {
       website <- veterinaries$website[i]
       
       popup_content <- paste0("<b>", name, "</b><br>",
-                              "Avis : ", rating, "/5<br>",
-                              "Lieu : ", place, "<br>",
-                              "Adresse : ", address, "<br>",
-                              "Téléphone : ", phone, "<br>",
-                              "Site internet : ", website, "<br>")
+                              "Rating : ", rating, "/5<br>",
+                              "Place : ", place, "<br>",
+                              "Adress : ", address, "<br>",
+                              "Phone : ", phone, "<br>",
+                              "Website : ", website, "<br>")
       
       geneva_map <- geneva_map %>%
         addMarkers(lng = longitude, lat = latitude, popup = popup_content)
@@ -724,9 +728,64 @@ server <- function(input, output) {
     # Afficher la carte
     geneva_map
   })
+  
+  
+  #Map of adoption centers in and around Geneva
+  library(shiny)
+  library(leaflet)
+  
+  # Define the Shiny application user interface
+  ui <- fluidPage(
+    leafletOutput("map")
+  )
+  
+  # Define the Shiny application server
+  server <- function(input, output) {
+    
+    # Example data for adoption centers
+    adoption_centers <- data.frame(
+      name = c("Refuge de l'espoir - Arthaz", "Société Protectrice des Animaux (SPA) Refuge Vailly", "SOS Chats", "Refuge de la SPA La Côte", "Centre et Refuge SVPA"),
+      address = c("284 Rte de la Basse Arve, 74380 Arthaz Pont-Notre-Dame, France", "Av. de Cavoitanne 5, 1233 Bernex", "Chem. du Plantin 2, 1217 Meyrin, Suisse", "Chem. du Bochet 20, 1260 Nyon, Suisse", "Rte de Berne 318, 1000 Lausanne, Suisse"),
+      rating = c(4.2, 4.3, 4.2, 4.3, 4.4),
+      phone = c("+33 4 50 36 02 80", "+41 22 757 13 23", "+41 22 785 32 84", "+41 22 361 61 15", "+41 21 784 80 00"),
+      website = c("www.dons.animaux-secours.fr", "www.sgpa.ch", "http://www.sos-chats.ch/", "https://www.spalacote.ch/", "http://www.svpa.ch/"),
+      latitude = c(46.166053, 46.171801, 46.224682, 46.406120, 46.570829),
+      longitude = c(6.245335, 6.051797, 6.085156, 6.213761, 6.711519)
+    )
+    
+    # Render the leaflet map
+    output$map <- renderLeaflet({
+      
+      # Create a map centered on Geneva
+      geneva_map <- leaflet() %>%
+        setView(lng = 6.1432, lat = 46.2044, zoom = 12) %>%
+        addTiles()
+      
+      # Add markers for adoption centers with additional information
+      for (i in 1:nrow(adoption_centers)) {
+        name <- adoption_centers$name[i]
+        address <- adoption_centers$address[i]
+        rating <- adoption_centers$rating[i]
+        phone <- adoption_centers$phone[i]
+        website <- adoption_centers$website[i]
+        latitude <- adoption_centers$latitude[i]
+        longitude <- adoption_centers$longitude[i]
+        
+        popup_content <- paste0("<b>", name, "</b><br>",
+                                "Address: ", address, "<br>",
+                                "Rating: ", rating, "/5<br>",
+                                "Phone: ", phone, "<br>",
+                                "Website: ", website, "<br>")
+        
+        geneva_map <- geneva_map %>%
+          addMarkers(lng = longitude, lat = latitude, popup = popup_content)
+      }
+      
+      # Display the map
+      geneva_map
+    })
+  }
 }
-
-
 
 
 # Run the application 
