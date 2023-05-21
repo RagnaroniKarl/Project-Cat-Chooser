@@ -81,24 +81,21 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             
                             #Vets near me tab!
                             tabPanel("Vetenarians Near Me", 
-<<<<<<< Updated upstream
                                      h3("This is where you can find local vets in your area!", style = "color:orange"),
                                      leafletOutput("map")),
-=======
                                      br(),
                                      h3("This is where you can find local vets in your area!", style = "color:orange")),
                             br(), 
                             p("This is where you can find all the necessary informations about vetenarians available in the canton of Geneva"),
                             br(),
                             leafletOutput(("map")),
-                ),
+                )
                 
->>>>>>> Stashed changes
                             #Adoptions Centers
-                            tabPanel("Adoption Centers Near Me", h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange")),
+                            tabPanel("Adoption Centers Near Me", h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange"))
                             
                             #Random Cat Facts
-                            tabPanel("Random Cat Facts", h3("Here are some random cat facts you may find very interesting!", style = "color:orange"),),
+                            tabPanel("Random Cat Facts", h3("Here are some random cat facts you may find very interesting!", style = "color:orange"),)
                             
                             #About us 
                             tabPanel("About Us",
@@ -163,21 +160,18 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      )
                             )
                 )
-<<<<<<< Updated upstream
 )
 
 
 
 # )
 #)
-=======
 
                                                        
                                      
                
                 # )
                 #)
->>>>>>> Stashed changes
 
 
 #outputs
@@ -585,7 +579,7 @@ server <- function(input, output) {
   
   
   #Map of Geneva's veterinarians
-<<<<<<< Updated upstream
+
   library(shiny)
   library(leaflet)
   
@@ -624,7 +618,7 @@ server <- function(input, output) {
         longitude <- veterinaries$longitude[i]
         phone <- veterinaries$phone[i]
         website <- veterinaries$website[i]
-=======
+
     library(shiny)
     library(leaflet)
     
@@ -647,7 +641,6 @@ server <- function(input, output) {
           phone = c("079 341 47 72", "022 734 42 48", "022 708 11 33", "022 708 11 99", "022 340 27 27", "022 342 74 00", "022 752 67 67", "022 792 12 05", "022 719 10 10", "022 995 96 97", "022 349 63 33", "022 774 25 25", "022 348 58 00", "022 757 61 18", "022 320 43 43", "022 343 30 80", "022 752 34 11", "022 343 22 22", "079 154 35 79", "079 120 65 12", "022 736 00 06", "022 755 46 24", "022 736 44 00", "022 840 08 68", "022 884 18 28", "022 342 45 46"),
           website = c("non", "http://www.imavet.ch", "https://vetspecialistes.ch/", "non", "http://veto-stjean.ch", "http://www.veterinaire-carouge.com", "http://www.vetvesenaz.ch", "non", "http://www.vetriantbosson.ch", "non", "http://www.vet-chene-bougeries.ch", "non", "non", "https://vetbernex.ch/", "http://www.bestiaire.ch", "non", "https://vet-collonge-bellerive.ch/", "non", "http://www.veto-psy.ch", "http://www.vettravel.info", "https://www.vetchampel.ch/", "non", "http://www.vet-villereuse.ch", "non", "http://www.terkuile.tk", "https://www.cabinetveterinairedesacacias.com/")
         )
->>>>>>> Stashed changes
         
         # Créer une carte centrée sur Genève
         geneva_map <- leaflet() %>%
