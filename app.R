@@ -100,11 +100,6 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      p("Presented below is a map highlighting the locations of several adoption centers in and around the Geneva area. By clicking on the respective icon, you can access detailed information about each adoption center, including the center's name, address, telephone numbers, their general rating out of 5, and a provided website link."),
                                      br(),
                                      leafletOutput("map")),
-                                     h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange"),
-                                     br(),
-                                     br(),
-                                     p("Below you will find a map with the locations of adoptions centers in the Geneva area. If you desire to know more about a specific location, click on the icon and it will display the information regarding that specific adoptation center"),
-                                     )
                             
                             #Random Cat Facts
                             tabPanel("About Cats", 
@@ -148,7 +143,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      br(),
                                      p("- There’s a dispute as to exactly how many breeds of housecats there are. The International Cat Association recognizes 71 individual breeds, while the Cat Fanciers’ Association only recognizes 44."),
                                      br(),
-                                     h3(strong("Thank you for reading!"), align = 'center'))
+                                     h3(strong("Thank you for reading!"), align = 'center')),
                             
                             #About us 
                             tabPanel("About Us",
@@ -213,7 +208,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      )
                             )
                 )
-)
+
 
 # )
 #)
