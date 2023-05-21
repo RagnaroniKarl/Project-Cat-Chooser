@@ -81,7 +81,15 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                             tabPanel("Vetenarians Near Me", 
                                      h3("This is where you can find local vets in your area!", style = "color:orange"),
                                      br(),
-                                     p("Below you will find a map with the locations of various vetenarians in the Geneva area. If you want to know more about a specific location, click on the icon and it will display the information about that particular vetenarian. The information will be a general rating out of 5, the name of the cabinet, the address, the telephone numbers and the website link if one exists."),
+                                     p("Below you will find a map with the locations of various vetenarians in the Geneva area. If you want to know more about a specific location, click on the icon and it will display the information about that particular vetenarian."),
+                                     br(),
+                                     p("The information will be a general rating out of five, regarding :"),
+                                     br(),
+                                     p(" * The name of the cabinet"),
+                                     p(" * The address"),
+                                     p(" * The telephone numbers"), 
+                                     p(" * The website link if one exists."),
+                                     br(),
                                      br(),
                                      leafletOutput("map")),
                             
@@ -92,9 +100,16 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      p("Presented below is a map highlighting the locations of several adoption centers in and around the Geneva area. By clicking on the respective icon, you can access detailed information about each adoption center, including the center's name, address, telephone numbers, their general rating out of 5, and a provided website link."),
                                      br(),
                                      leafletOutput("map")),
+                                     h3("If you're looking for a new friend, this is the right place to look!", style = "color:orange"),
+                                     br(),
+                                     br(),
+                                     p("Below you will find a map with the locations of adoptions centers in the Geneva area. If you desire to know more about a specific location, click on the icon and it will display the information regarding that specific adoptation center"),
+                                     )
                             
                             #Random Cat Facts
-                            tabPanel("About Cats", h3("Interested in knowing more about cats, their history and more? You're in the right place!", style = "color:orange"),
+                            tabPanel("About Cats", 
+                                     h3("Interested in knowing more about cats, their history and more? You're in the right place!", style = "color:orange"),
+                                     br(),
                                      br(),
                                      h4(strong("The History of Cats : ")),
                                      p("The relationship between humans and cats started around 10'000 years ago, in the Fertile Crescent where agriculture attracted rodents. This prompted wild cats or 'felix silvestris lybica' to go to the farms to hunt for this now abundant food supply. Thus the mutually benefitial relationship between humans and cats begun. Cats have been domesticated for thousands of years, with the earliest evidence of domesticated cats dating back to ancient Egypt around 4,000 years ago. In ancient Egypt, cats were highly revered and even worshipped, with the goddess Bastet depicted as a woman with the head of a cat. Cats were also seen as protectors of crops and were often kept in households to catch rodents and other pests. From Egypt, the domestication of cats spread to other parts of the world, including Europe and Asia. Cats were often kept on ships to control rat populations, which helped to prevent the spread of disease."),
@@ -133,7 +148,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                      br(),
                                      p("- There’s a dispute as to exactly how many breeds of housecats there are. The International Cat Association recognizes 71 individual breeds, while the Cat Fanciers’ Association only recognizes 44."),
                                      br(),
-                                     h3(strong("Thank you for reading!"), align = 'center')),
+                                     h3(strong("Thank you for reading!"), align = 'center'))
                             
                             #About us 
                             tabPanel("About Us",
@@ -648,30 +663,30 @@ server <- function(input, output) {
         a("The Cat Fanciers' Association : Siamese Cat", href = "https://cfa.org/siamese"),
         h5("This is one of Karl's cats : Tiggy!", style = "color:red"),)
     } else if (input$catbreeds == "Sphynx"){
-       p(style = "text-align : justify;", 
-         "Without a doubt one of the more unique cat breeds, the Sphynx is named that way after the Ancient Egyptian sphynx. They are most striking because of their lack of fur but they do have some fur, like we humans have on our faces (peach fuzz). Funnily enough, they actually originated in Canada sometime in the 1960s. They don't really have a fur color and their eyes can be any feline eye color.",
-         br(),
-         br(),
-         "The Sphynx cat can live to be between 8 and 14 years old. They can get to be around 5 and a half kilos in weight and can get around 40 cm long. They are not hypoallergenic despite not having any 'real' fur. They are actually quite affectionate and love the heat, making them good cuddlers. They really like snuggling under blankets where its warm. The averge Sphynx can cost you around CHF1'500 up to CHF3'000.",
-         br(),
-         br(),
-         h4("Health Issues : "),
-         "The Sphynx has a rather unique set of problems owners need to deal with on top of the usual hypertrophic cardiomyopathy.",
-         br(),
-         br(),
-         "Due to their lack of fur, Sphynxes are best as indoor cats since they will get sunburnt if exposed to the sunlight for too long. In fact, it is probably worse for them than for humans.",
-         br(),
-         br(),
-         "Urticaria pigmentosa : This is an itchy, hereditary skin condition that causes a rash.",
-         br(),
-         br(),
-         "Periodontal disease or gum disorders.",
-         br(),
-         br(),
-         "If you want to learn more about the Sphynx cat, please consult the following link : ",
-         a("The Cat Fanciers' Association : Sphynx Cat", href = "https://cfa.org/sphynx")) 
-        }
-     })
+      p(style = "text-align : justify;", 
+        "Without a doubt one of the more unique cat breeds, the Sphynx is named that way after the Ancient Egyptian sphynx. They are most striking because of their lack of fur but they do have some fur, like we humans have on our faces (peach fuzz). Funnily enough, they actually originated in Canada sometime in the 1960s. They don't really have a fur color and their eyes can be any feline eye color.",
+        br(),
+        br(),
+        "The Sphynx cat can live to be between 8 and 14 years old. They can get to be around 5 and a half kilos in weight and can get around 40 cm long. They are not hypoallergenic despite not having any 'real' fur. They are actually quite affectionate and love the heat, making them good cuddlers. They really like snuggling under blankets where its warm. The averge Sphynx can cost you around CHF1'500 up to CHF3'000.",
+        br(),
+        br(),
+        h4("Health Issues : "),
+        "The Sphynx has a rather unique set of problems owners need to deal with on top of the usual hypertrophic cardiomyopathy.",
+        br(),
+        br(),
+        "Due to their lack of fur, Sphynxes are best as indoor cats since they will get sunburnt if exposed to the sunlight for too long. In fact, it is probably worse for them than for humans.",
+        br(),
+        br(),
+        "Urticaria pigmentosa : This is an itchy, hereditary skin condition that causes a rash.",
+        br(),
+        br(),
+        "Periodontal disease or gum disorders.",
+        br(),
+        br(),
+        "If you want to learn more about the Sphynx cat, please consult the following link : ",
+        a("The Cat Fanciers' Association : Sphynx Cat", href = "https://cfa.org/sphynx")) 
+    }
+  })
   
   
   #Map of Geneva's veterinarians
