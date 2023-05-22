@@ -725,7 +725,7 @@ server <- function(input, output) {
       latitude = c(46.1630375, 46.2133737, 46.2351041, 46.195877, 46.2043452, 46.1858175, 46.240613, 46.191012, 46.226302, 46.198451, 46.196273, 46.252776, 46.194043, 46.177563, 46.202942, 46.1820537, 46.252583, 46.1767047, 46.205218, 46.205145, 46.195716, 46.279749, 46.199889, 46.201207, 46.173957, 46.191710),
       longitude = c(6.0422094, 6.128216, 6.1223517, 6.144583, 6.1281351, 6.1458293, 6.198072, 6.108927, 6.083383, 6.134992, 6.190887, 6.143145, 6.201620, 6.077023, 6.134026, 6.1374464, 6.203052, 6.1335575, 6.103946, 6.104021, 6.163799, 6.166744, 6.158398, 6.164067, 6.123575, 6.136614),
       phone = c("079 341 47 72", "022 734 42 48", "022 708 11 33", "022 708 11 99", "022 340 27 27", "022 342 74 00", "022 752 67 67", "022 792 12 05", "022 719 10 10", "022 995 96 97", "022 349 63 33", "022 774 25 25", "022 348 58 00", "022 757 61 18", "022 320 43 43", "022 343 30 80", "022 752 34 11", "022 343 22 22", "079 154 35 79", "079 120 65 12", "022 736 00 06", "022 755 46 24", "022 736 44 00", "022 840 08 68", "022 884 18 28", "022 342 45 46"),
-      website = c("non", "http://www.imavet.ch", "https://vetspecialistes.ch/", "non", "http://veto-stjean.ch", "http://www.veterinaire-carouge.com", "http://www.vetvesenaz.ch", "non", "http://www.vetriantbosson.ch", "non", "http://www.vet-chene-bougeries.ch", "non", "non", "https://vetbernex.ch/", "http://www.bestiaire.ch", "non", "https://vet-collonge-bellerive.ch/", "non", "http://www.veto-psy.ch", "http://www.vettravel.info", "https://www.vetchampel.ch/", "non", "http://www.vet-villereuse.ch", "non", "http://www.terkuile.tk", "https://www.cabinetveterinairedesacacias.com/")
+      website = c("None", "http://www.imavet.ch", "https://vetspecialistes.ch/", "None", "http://veto-stjean.ch", "http://www.veterinaire-carouge.com", "http://www.vetvesenaz.ch", "None", "http://www.vetriantbosson.ch", "None", "http://www.vet-chene-bougeries.ch", "None", "None", "https://vetbernex.ch/", "http://www.bestiaire.ch", "None", "https://vet-collonge-bellerive.ch/", "None", "http://www.veto-psy.ch", "http://www.vettravel.info", "https://www.vetchampel.ch/", "None", "http://www.vet-villereuse.ch", "None", "http://www.terkuile.tk", "https://www.cabinetveterinairedesacacias.com/")
     )
     
     # Créer une carte centrée sur Genève
@@ -749,7 +749,7 @@ server <- function(input, output) {
                               "Name : ", place, "<br>",
                               "Address : ", address, "<br>",
                               "Phone : ", phone, "<br>",
-                              "Webtsite : ", website, "<br>")
+                              "Website : ", website, "<br>")
       
       geneva_map <- geneva_map %>%
         addMarkers(lng = longitude, lat = latitude, popup = popup_content)
