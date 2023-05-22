@@ -4,10 +4,10 @@ username:
 account: project-cat-chooser
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 9156448
-bundleId: 7245562
+appId: 9160901
+bundleId: 7248272
 url: https://project-cat-chooser.shinyapps.io/Project-Cat-Chooser/
-when: 1684709142.98266
-lastSyncTime: 1684709142.98271
+when: 1684766734.28635
+lastSyncTime: 1684766734.28639
 asMultiple: FALSE
 asStatic: FALSE
