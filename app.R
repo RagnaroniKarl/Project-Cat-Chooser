@@ -193,7 +193,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                                              # Colonne 1
                                              div(class = "col-md-4",
                                                  h3("Nelson Chikuru"),
-                                                 img(src = "nelson-chikuru Petite.jpeg", class = "img-responsive"),
+                                                 img(src = "nelson-chikuru-petite.jpeg", class = "img-responsive"),
                                                  h4("Marketing Manager:"),
                                                  p("Nelson develops and implements effective marketing strategies, manages campaigns, conducts market research, and oversees brand management. Nelson collaborates with internal teams and external partners for seamless coordination. It requires market knowledge, project management skills, and creative thinking."),
                                                  h4("Contacts :"),
