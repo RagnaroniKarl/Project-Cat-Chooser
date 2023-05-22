@@ -106,7 +106,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
                     function initMap() {
                       var center = {lat: 46.2045189, lng: 6.1448458};
                       var map = new google.maps.Map(document.getElementById('map'), {
-                        zoom: 13,
+                        zoom: 12,
                         center: center
                       });
                       var marker = new google.maps.Marker({
@@ -745,11 +745,11 @@ server <- function(input, output) {
       website <- veterinaries$website[i]
       
       popup_content <- paste0("<b>", name, "</b><br>",
-                              "Avis : ", rating, "/5<br>",
-                              "Lieu : ", place, "<br>",
-                              "Adresse : ", address, "<br>",
-                              "Téléphone : ", phone, "<br>",
-                              "Site internet : ", website, "<br>")
+                              "Ratings : ", rating, "/5<br>",
+                              "Name : ", place, "<br>",
+                              "Address : ", address, "<br>",
+                              "Phone : ", phone, "<br>",
+                              "Webtsite : ", website, "<br>")
       
       geneva_map <- geneva_map %>%
         addMarkers(lng = longitude, lat = latitude, popup = popup_content)
