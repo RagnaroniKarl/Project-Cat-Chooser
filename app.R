@@ -274,7 +274,7 @@ server <- function(input, output) {
       
     } else if (input$catbreeds == "Exotic Shorthair") {
       
-      img(height = 200, width = 300, src = "exotic-shorthair")
+      img(height = 200, width = 300, src = "exotic-shorthair.jpg")
       
     } else if (input$catbreeds == "Himalayan") {
       
